@@ -1,0 +1,53 @@
+.sourcesradio {
+    display: inline-block;
+    font-size:50px;
+    line-height: -4px;
+    height: 0px;
+    color: white;
+    font-family: "Founders Semibold"
+}
+
+.srcs {
+    line-height: 0px;
+    font-size: 14px;
+    color: white;
+    font-family: "ABC Medium";
+}
+
+.goodinteruption {
+    line-height: 0px;
+    font-size: 14px;
+    color: white;
+    font-family: "ABC Medium";
+}
+
+.bottomrow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.center {
+   position: absolute;
+   top: 45%; 
+   left: 50%;
+   transform: translate(-50%, -55%);
+   width:300px;
+}
+
+.background {
+    color: black;
+}
+
+@font-face {
+    font-family: "ABC Medium";
+    src: local("ABCFavoritMonoEdu-Medium."),
+    url("../fonts/ABCFavoritMonoEdu-Medium.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}
