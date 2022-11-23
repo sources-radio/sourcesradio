@@ -6,6 +6,8 @@ import Tracklist from "./Tracklist";
 import ReactHowler from "react-howler";
 import { useMediaQuery } from "react-responsive";
 import About from './About'
+import Desktop from "./Desktop";
+import Mobile from "./Mobile";
 
 let player;
 
@@ -17,6 +19,7 @@ export default function Main(){
     const mix002 = require('../data/mix_002.json');
     const mix003 = require('../data/mix_003.json');
     const [currentMix, setCurrentMix] = useState(mix001);
+    const [currentlySelectedMix, setCurrentlySelectedMix] = useState(mix001);
     const [playState, setPlayState] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [aboutOpen, setAboutOpen] = useState(false);
@@ -46,14 +49,46 @@ export default function Main(){
         }
     }, [])
 
+    const site = (desktop) =>{
+
+        var data = {};
+        data.currentMix = currentMix;
+        data.setCurrentMix = setCurrentMix;
+        data.playState = playState;
+        data.currentTime = currentTime;
+        data.aboutOpen = aboutOpen;
+        data.setAboutOpen = setAboutOpen;
+        data.mixArchiveOpen = mixArchiveOpen;
+        data.setMixArchiveOpen = setMixArchiveOpen;
+        data.allMixes = mixArray;
+        data.setPlayState = PauseToggle;
+
+        if(desktop === true)
+        {
+            return(
+                <Desktop 
+                    data={data} 
+                />
+            )
+        }
+        else{
+            return(
+                <Mobile></Mobile>
+            )
+        }
+
+    }
+
     return (
         <div>
+            {site(true)}
+            
             <ReactHowler 
                 playing={playState} 
                 html={true} src={'/audio-files/' + currentMix.title + ".mp3"} 
                 ref={(ref) => {player = ref;}}
             />
-            <h1>SOURCES RADIO</h1>
+            {/* <h1>SOURCES RADIO</h1>
             <About aboutOpen={aboutOpen} callback={setAboutOpen} />
             <MixArchive mixArchiveOpen={mixArchiveOpen} callback={setMixArchiveOpen} allMixes={allMixes} setMix={setMix}></MixArchive>
             <br></br>
@@ -65,7 +100,7 @@ export default function Main(){
             <Tracklist currentMix={currentMix}></Tracklist>
             <br></br>
             <p>{isDesktop ? "desktop" : "mobile"}</p>
-            <p>{isPortrait ? "portrait" : "landscape"}</p>
+            <p>{isPortrait ? "portrait" : "landscape"}</p> */}
         </div>
     )
 }
