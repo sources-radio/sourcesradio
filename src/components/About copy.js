@@ -13,8 +13,8 @@ export default function About(props){
 
     return (
         <div>
-            <button onClick={() => props.callback(!props.aboutOpen)}>ABOUT</button>
-            <div>{props.aboutOpen ? aboutString : null}</div>
+            <button onClick={() => props.data.setAboutOpen(!props.data.aboutOpen)}>ABOUT</button>
+            <div>{props.data.aboutOpen ? aboutString : null}</div>
         </div>
     )
 }

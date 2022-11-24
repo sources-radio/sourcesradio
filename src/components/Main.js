@@ -1,25 +1,26 @@
 import { useState } from "react"
 import { useEffect } from "react";
-import MixArchive from "./MixArchive";
+import MixArchive from "./Desktop/MixArchive/MixArchive";
 import Title from "./Title";
 import Tracklist from "./Tracklist";
 import ReactHowler from "react-howler";
 import { useMediaQuery } from "react-responsive";
-import About from './About'
-import Desktop from "./Desktop";
-import Mobile from "./Mobile";
+import Desktop from "./Desktop/Desktop";
+import Mobile from "./Mobile/Mobile";
 
 let player;
 
 export default function Main(){
-    const isDesktop = useMediaQuery({ query: '(min-width: 1124px)' })
+    // const isDesktop = useMediaQuery({ query: '(min-width: 1124px)' })
+    const isDesktop = useMediaQuery({ query: '(min-width: 700px)' })
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-    
+    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)'})
+
     const mix001 = require('../data/mix_001.json');
     const mix002 = require('../data/mix_002.json');
     const mix003 = require('../data/mix_003.json');
-    const [currentMix, setCurrentMix] = useState(mix001);
-    const [currentlySelectedMix, setCurrentlySelectedMix] = useState(mix001);
+    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix001);
+    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix001);
     const [playState, setPlayState] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [aboutOpen, setAboutOpen] = useState(false);
@@ -30,14 +31,14 @@ export default function Main(){
 
     var mixNames = mixArray.map((mixes) => '/audio-files/' + mixes.title + ".mp3");
 
-    function PauseToggle(){
+    function pauseToggle(){
         setPlayState(!playState);
     }
 
     function setMix(mix){
         if(playState)
-            PauseToggle();
-        setCurrentMix(mix);
+            pauseToggle();
+        setCurrentPlayingMix(mix);
     }
 
     useEffect(() => {
@@ -52,16 +53,18 @@ export default function Main(){
     const site = (desktop) =>{
 
         var data = {};
-        data.currentMix = currentMix;
-        data.setCurrentMix = setCurrentMix;
+        data.currentPlayingMix = currentPlayingMix;
+        data.setCurrentPlayingMix = setCurrentPlayingMix;
+        data.currentSelectedMix = currentSelectedMix;
+        data.setCurrentSelectedMix = setCurrentSelectedMix;
         data.playState = playState;
         data.currentTime = currentTime;
         data.aboutOpen = aboutOpen;
         data.setAboutOpen = setAboutOpen;
         data.mixArchiveOpen = mixArchiveOpen;
         data.setMixArchiveOpen = setMixArchiveOpen;
-        data.allMixes = mixArray;
-        data.setPlayState = PauseToggle;
+        data.allMixes = allMixes;
+        data.pauseToggle = pauseToggle;
 
         if(desktop === true)
         {
@@ -73,7 +76,7 @@ export default function Main(){
         }
         else{
             return(
-                <Mobile></Mobile>
+                <Mobile/>
             )
         }
 
@@ -81,11 +84,11 @@ export default function Main(){
 
     return (
         <div>
-            {site(true)}
+            {site(isDesktop)}
             
             <ReactHowler 
                 playing={playState} 
-                html={true} src={'/audio-files/' + currentMix.title + ".mp3"} 
+                html={true} src={'/audio-files/' + currentPlayingMix.title + ".mp3"} 
                 ref={(ref) => {player = ref;}}
             />
             {/* <h1>SOURCES RADIO</h1>
