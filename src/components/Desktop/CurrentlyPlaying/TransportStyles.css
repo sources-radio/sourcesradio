@@ -1,5 +1,4 @@
 .transport{
-    background-color: rgb(242, 242, 242);
     color: rgb(0, 0, 0);
     position: absolute;
     width: 100%;
@@ -11,16 +10,24 @@
     font-family: "ABC Medium";
     font-size: 20px;
     padding: 3px;
-    padding-left: 25px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    display:inline-block;
+}
+
+.currentTime{
+    font-family: "ABC Medium";
+    font-size: 20px;
+    padding: 3px;
+    padding-bottom: 40px;
+    padding-left: 40px;
     display:inline-block;
 }
 
 .playPause {
-    padding: 5px;
+    padding-left: 18px;
+    padding-top: 7px;
     position: absolute;
-    top:50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 

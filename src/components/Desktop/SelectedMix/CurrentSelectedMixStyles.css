@@ -27,6 +27,7 @@
 
 .current {
     width: 30%;
+    padding-left: 35px;
     position: absolute;
     top:50%;
     -ms-transform: translateY(-50%);

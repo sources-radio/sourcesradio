@@ -25,6 +25,7 @@ export default function Main(){
     const [currentTime, setCurrentTime] = useState(0);
     const [aboutOpen, setAboutOpen] = useState(false);
     const [mixArchiveOpen, setMixArchiveOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const mixArray = [mix001, mix002, mix003];
     const [allMixes, setAllMixes] = useState(mixArray);
@@ -44,7 +45,10 @@ export default function Main(){
     useEffect(() => {
         // this.setMixArchive = this.setMixArchive.bind(this);
 
-        const interval = setInterval(() => setCurrentTime(player.seek().toFixed(0)), 500);
+        const interval = setInterval(() => 
+        {
+            setCurrentTime(player.seek().toFixed(0));
+        }, 500);
         return () => {
             clearInterval(interval)
         }
@@ -65,6 +69,8 @@ export default function Main(){
         data.setMixArchiveOpen = setMixArchiveOpen;
         data.allMixes = allMixes;
         data.pauseToggle = pauseToggle;
+        data.currentTime = currentTime;
+        data.isLoading = isLoading;
 
         if(desktop === true)
         {
@@ -82,14 +88,24 @@ export default function Main(){
 
     }
 
+    function OnPlay(){
+        console.log("On Play");
+    }
+
+    function OnLoaded(){
+        console.log("On Loaded")
+    }
+
     return (
         <div>
             {site(isDesktop)}
             
             <ReactHowler 
                 playing={playState} 
-                html={true} src={'/audio-files/' + currentPlayingMix.title + ".mp3"} 
+                html={true} src={'/audio-files/' + currentPlayingMix.title + ".mp3"}
                 ref={(ref) => {player = ref;}}
+                onPlay={OnPlay}
+                onLoad={OnLoaded}
             />
             {/* <h1>SOURCES RADIO</h1>
             <About aboutOpen={aboutOpen} callback={setAboutOpen} />

@@ -8,9 +8,12 @@ export default function Transport(props){
     return(
         <div className="transport">
             {button}
-                
             <div className="currentMix">
                 {props.data.currentPlayingMix.title}
+            </div>
+            <div className="currentTime">
+                {props.data.currentTime}
+
             </div>
         </div>
     )
