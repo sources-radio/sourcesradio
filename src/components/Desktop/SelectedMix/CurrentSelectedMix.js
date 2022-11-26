@@ -37,7 +37,7 @@ export default function SelectedMix(props){
     return(
         <div className="current">
             <div className="title">
-                <img src={'./MixTitles/' + props.data.currentSelectedMix.title + ".png"} />
+                <img src={'./mixTitles/' + props.data.currentSelectedMix.title + ".png"} />
                 <div className="bottomRow">
                     <button onClick={setNewMix} className="pauseToggle">
                         {getPlayPauseButton()}

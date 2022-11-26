@@ -36,7 +36,7 @@ export default function MobileCurrentSelectedMix(props){
     return(
         <div>
             <div className='mobileSelectedMixContainer'>
-                <img className='mobileSelectedMix' src={'./MixTitles/' + props.data.currentSelectedMix.title + ".png"} />
+                <img className='mobileSelectedMix' src={'./mixTitles/' + props.data.currentSelectedMix.title + ".png"} />
                 <div className="mobileBottomRow">
                     <button className='mobilePlayButton' onClick={setNewMix}>
                         {getPlayPauseButton()}
