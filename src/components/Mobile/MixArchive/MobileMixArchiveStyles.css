@@ -1,6 +1,7 @@
 .mobileMixArchiveContainer{
     padding: 0px;
     padding-left: 5%;
+    padding-bottom: 20px;
 
 }
 
@@ -14,7 +15,6 @@
 	cursor: pointer;
 	outline: inherit;
     padding: 0px;
-    padding-bottom: 20px;
 }
 
 .mobileMixArchives{
