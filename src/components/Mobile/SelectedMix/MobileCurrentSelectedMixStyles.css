@@ -17,11 +17,10 @@
 }
 
 .mobilePlayButton{
-    position:absolute;
-    left: 4%;
     font-family: "ABC Medium";
     font-size: 30px;
     text-align: left;
+    padding-left: 5%;
     background: none;
 	color: inherit;
 	border: none;
