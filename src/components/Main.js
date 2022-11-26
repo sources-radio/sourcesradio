@@ -13,6 +13,7 @@ let player;
 export default function Main(){
     // const isDesktop = useMediaQuery({ query: '(min-width: 1124px)' })
     const isDesktop = useMediaQuery({ query: '(min-width: 700px)' })
+    const showTracklistOnDesktop = useMediaQuery({ query: '(min-width: 1230px)'})
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)'})
 
@@ -71,6 +72,7 @@ export default function Main(){
         data.pauseToggle = pauseToggle;
         data.currentTime = currentTime;
         data.isLoading = isLoading;
+        data.showTracklistOnDesktop = showTracklistOnDesktop;
 
         if(desktop === true)
         {

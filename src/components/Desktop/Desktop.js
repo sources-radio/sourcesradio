@@ -3,6 +3,7 @@ import About from "./About/About";
 import Transport from "./CurrentlyPlaying/Transport";
 import CurrentSelectedMix from "./SelectedMix/CurrentSelectedMix";
 import TopTitle from "./TopTitle/TopTitle";
+import Tracklist from "./tracklist/Tracklist";
 
 export default function Desktop(props){
     
@@ -13,6 +14,7 @@ export default function Desktop(props){
             <Transport data={props.data}/>
             <About data={props.data}></About>
             <MixArchive data={props.data} />
+            <Tracklist data={props.data} />
             {/* {// this is how all the data is being passed down} */}
             {/* <button onClick={() => props.data.setCurrentMix(props.data.allMixes[1])}></button> */}
         </div>
