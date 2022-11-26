@@ -27,6 +27,7 @@ export default function Main(){
     const [aboutOpen, setAboutOpen] = useState(false);
     const [mixArchiveOpen, setMixArchiveOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
     const mixArray = [mix001, mix002, mix003];
     const [allMixes, setAllMixes] = useState(mixArray);
@@ -73,6 +74,8 @@ export default function Main(){
         data.currentTime = currentTime;
         data.isLoading = isLoading;
         data.showTracklistOnDesktop = showTracklistOnDesktop;
+        data.isTracklistOpen = isTracklistOpen;
+        data.setIsTracklistOpen = setIsTracklistOpen;
 
         if(desktop === true)
         {
