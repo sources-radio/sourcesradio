@@ -1,10 +1,8 @@
 import { useState } from "react"
 import { useEffect } from "react";
-import MixArchive from "./Desktop/MixArchive/MixArchive";
-import Title from "./Title";
-import Tracklist from "./Tracklist";
 import ReactHowler from "react-howler";
 import { useMediaQuery } from "react-responsive";
+import LandingPage from "../LandingPage/LandingPage";
 import Desktop from "./Desktop/Desktop";
 import Mobile from "./Mobile/Mobile";
 
@@ -101,6 +99,7 @@ export default function Main(){
 
     return (
         <div>
+            {/* <LandingPage ></LandingPage> */}
             {site(isDesktop)}
             
             <ReactHowler 
