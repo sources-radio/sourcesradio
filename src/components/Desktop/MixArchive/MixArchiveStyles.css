@@ -1,0 +1,40 @@
+.mixArchiveContainer{
+    position: absolute;
+    right: 140px;
+    top: 20px;
+    text-align: right;
+}
+
+.mixArchiveButton{
+    font-family: "ABC Medium";
+    font-size: 20px;
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+    padding-bottom: 20px;
+}
+
+.mixArchives{
+    text-align: right;
+    font-family: "ABC Medium";
+    font-size: 14px;
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ABC Medium";
+    src: local("ABCFavoritMonoEdu-Medium."),
+    url("../../../fonts/ABCFavoritMonoEdu-Medium.otf") format("truetype");
+}

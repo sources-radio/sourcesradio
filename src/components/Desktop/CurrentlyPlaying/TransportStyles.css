@@ -1,0 +1,45 @@
+.transport{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    display:inline-block;
+}
+
+.currentMix{
+    font-family: "ABC Medium";
+    font-size: 20px;
+    padding: 3px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    display:inline-block;
+}
+
+.currentTime{
+    font-family: "ABC Medium";
+    font-size: 20px;
+    padding: 3px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    display:inline-block;
+}
+
+.playPause {
+    padding-left: 18px;
+    padding-top: 7px;
+    position: absolute;
+}
+
+
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ABC Medium";
+    src: local("ABCFavoritMonoEdu-Medium."),
+    url("../../../fonts/ABCFavoritMonoEdu-Medium.otf") format("truetype");
+}
