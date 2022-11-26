@@ -16,7 +16,7 @@ export default function MobileTracklist(props){
     const tracks1 = props.data.currentSelectedMix.songs.map((song) => {
         
             return (
-                <div>
+                <div key={Math.random()}>
                     <div className="mobileSong">{song.songName}</div>
                     <div className="mobileArtist">{song.artist}</div>
                 </div>
