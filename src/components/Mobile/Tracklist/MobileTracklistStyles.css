@@ -1,0 +1,39 @@
+.mobileTracklist {
+padding-left: 5%;
+
+}
+
+.mobileSong {
+    font-family: "ABC Medium";
+    font-size: 15px;
+    margin: 0px;
+    padding: 0;
+    line-height: 5px;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mobileArtist {
+    font-size: 12px;
+    padding: 0;
+    font-family: "ABC Medium";
+    padding-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mobileTracklistButton {
+    font-family: "ABC Medium";
+    font-size: 20px;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+    padding: 0px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: white;
+    align-items: left;
+    text-align: left;
+}

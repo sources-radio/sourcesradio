@@ -1,0 +1,43 @@
+.mobileSelectedMix {
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 5%;
+}
+
+.mobileBottomRow {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.mobileSelectedMixContainer {
+}
+
+.mobilePlayButton{
+    position:absolute;
+    left: 4%;
+    font-family: "ABC Medium";
+    font-size: 30px;
+    text-align: left;
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.mobileDuration{
+    position:absolute;
+    right: 5%;
+    font-family: "ABC Medium";
+    font-size: 30px;
+    text-align: left;
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
