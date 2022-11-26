@@ -15,7 +15,7 @@ export default function Tracklist(props){
         if(index1++ < halfCount)
         {
             return (
-                <div>
+                <div key={Math.random()}>
                     <div className="song">{song.songName}</div>
                     <div className="artist">{song.artist}</div>
                 </div>
@@ -27,7 +27,7 @@ export default function Tracklist(props){
             if(index2++ > halfCount)
             {
                 return (
-                    <div>
+                    <div key={Math.random()}>
                         <div className="song">{song.songName}</div>
                         <div className="artist">{song.artist}</div>
                     </div>
