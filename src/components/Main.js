@@ -75,14 +75,12 @@ export default function Main(){
         if(desktop === true)
         {
             return(
-                <Desktop 
-                    data={data} 
-                />
+                <Desktop data={data} />
             )
         }
         else{
             return(
-                <Mobile/>
+                <Mobile data={data}/>
             )
         }
 

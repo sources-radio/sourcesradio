@@ -8,29 +8,36 @@
 
 .currentMix{
     font-family: "ABC Medium";
-    font-size: 20px;
+    font-size: 30px;
     padding: 3px;
     padding-bottom: 40px;
-    padding-left: 40px;
+    padding-left: 60px;
     display:inline-block;
+}
+
+.blackLine {
+    background-color: black;
+    position: absolute;
+    width: 3px;
+    height: 59px;
+    left: 195px;
+    bottom: 15px;
 }
 
 .currentTime{
     font-family: "ABC Medium";
-    font-size: 20px;
+    font-size: 30px;
     padding: 3px;
     padding-bottom: 40px;
-    padding-left: 40px;
+    padding-left: 20px;
     display:inline-block;
 }
 
 .playPause {
-    padding-left: 18px;
+    padding-left: 23px;
     padding-top: 7px;
     position: absolute;
 }
-
-
 
 @font-face {
     font-family: "Founders Semibold";

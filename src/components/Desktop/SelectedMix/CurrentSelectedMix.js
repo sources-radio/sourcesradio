@@ -13,7 +13,6 @@ export default function SelectedMix(props){
             if(props.data.playState)
                 // props.data.pauseToggle();
 
-            console.log("set current: " + props.data.currentSelectedMix.title)
             props.data.setCurrentPlayingMix(props.data.currentSelectedMix)
             
             setTimeout(() => {
@@ -38,14 +37,16 @@ export default function SelectedMix(props){
     return(
         <div className="current">
             <div className="title">
-                {props.data.currentSelectedMix.title}
+                <img src={'./MixTitles/' + props.data.currentSelectedMix.title + ".png"} />
+                <div className="bottomRow">
+                    <button onClick={setNewMix} className="pauseToggle">
+                        {getPlayPauseButton()}
+                    </button>
+                    <div className="duration">
+                        D: {props.data.currentSelectedMix.duration}
+                    </div>
+                </div>
             </div>
-            <button onClick={setNewMix} className="pauseToggle">
-                {getPlayPauseButton()}
-            </button>
-            <div className="duration">
-                {props.data.currentSelectedMix.duration}
-            </div>
-        </div>
+       </div>
    )
 }

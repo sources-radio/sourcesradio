@@ -6,11 +6,9 @@
 }
 
 .pauseToggle {
-    font-family: "Founders Semibold";
+    font-family: "ABC Medium";
     font-size: 20px;
     text-align: left;
-    padding-left: 9px;
-
     background: none;
 	color: inherit;
 	border: none;
@@ -18,11 +16,19 @@
 	outline: inherit;
 }
 
+img {
+    width: 100%;
+}
+
 .duration { 
-    font-family: "Founders Semibold";
-    font-size: 25px;
+    font-family: "ABC Medium";
+    font-size: 20px;
     text-align: left;
-    padding-left: 9px;
+}
+
+.bottomRow {
+    display: flex;
+    justify-content: space-between;
 }
 
 .current {
@@ -38,4 +44,10 @@
     font-family: "Founders Semibold";
     src: local("FoundersGroteskCondensed-Semibold.otf"),
     url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ABC Medium";
+    src: local("ABCFavoritMonoEdu-Medium."),
+    url("../../../fonts/ABCFavoritMonoEdu-Medium.otf") format("truetype");
 }
