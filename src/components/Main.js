@@ -11,7 +11,6 @@ let player;
 
 const mix001 = require('../data/mix_001.json');
 const mix002 = require('../data/mix_002.json');
-const mix003 = require('../data/mix_003.json');
 
 export default function Main(){
     const isDesktop = useMediaQuery({ query: '(min-width: 700px)' })
@@ -28,9 +27,9 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
-    const mixArray = [mix001, mix002, mix003];
+    const mixArray = [mix001, mix002];
     const [allMixes, setAllMixes] = useState(mixArray);
-    const [currentSong, setCurrentSong] = useState()
+    const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
 
 
     function pauseToggle(){
@@ -43,7 +42,7 @@ export default function Main(){
     }
 
     function processCurrentSong(){
-        var songData = {artist: "", song:""};
+        var songData = {artist: " ", song:" "};
 
         for (var i = 0; i < currentPlayingMix.songs.length; i++){
             let time = currentPlayingMix.songs[i].time;
