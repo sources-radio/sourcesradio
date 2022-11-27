@@ -2,31 +2,35 @@
     padding-top: 80px;
     padding-left: 5%;
     padding-right: 5%;
+    color: #242424;
 }
 
 .mobilePlayPause{
     padding-top: 4px;
+    color: #242424;
 }
 
 .mobileCurrentTime{
     font-family: "ABC Medium";
     font-size: 30px;
     padding-left: 10px;
+    color: #242424;
 }
 
 .mobileBlackLine{
-    background-color: black;
+    background-color: #242424;
     width: 3px;
     height: 69px;
     margin-left: 10px;
     margin-top: 5px;
+    color: #242424;
 }
 
 .mobileCurrentMix{
     font-family: "ABC Medium";
     font-size: 30px;
     padding-left: 10px;
-
+    color: #242424;
 }
 
 .mobileControl

@@ -1,8 +1,9 @@
 .topTitle{
-    color: black;
+    color: #242424;
     font-family: "Founders Semibold";
-    font-size: 46px;
-    padding: 6px;
+    font-size: 56px;
+    padding: 10px;
+    padding-left: 30px;
 }
 
 @font-face {

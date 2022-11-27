@@ -14,6 +14,7 @@
 	border: none;
 	cursor: pointer;
 	outline: inherit;
+    color: #242424;
 }
 
 img {
@@ -24,6 +25,7 @@ img {
     font-family: "ABC Medium";
     font-size: 20px;
     text-align: left;
+    color: #242424;
 }
 
 .bottomRow {

@@ -15,6 +15,7 @@
 	cursor: pointer;
 	outline: inherit;
     padding: 0px;
+    color: #242424;
 }
 
 .mobileMixArchives{
@@ -27,4 +28,5 @@
 	border: none;
 	cursor: pointer;
 	outline: inherit;
+    color: #242424;
 }
