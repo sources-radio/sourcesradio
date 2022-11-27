@@ -103,7 +103,7 @@ export default function Main(){
 
     function OnLoadError(mgs){
         console.log("load error: " + mgs)
-        console.log(window.location.hostname +'/audio-files/' + currentPlayingMix.title + ".mp3");
+        console.log('/audio-files/' + currentPlayingMix.title.toLowerCase() + ".mp3");
     }
 
     return (
@@ -113,7 +113,7 @@ export default function Main(){
             
             <ReactHowler 
                 playing={playState} 
-                html={true} src={window.location.hostname + '/audio-files/' + currentPlayingMix.title + ".mp3"}
+                html={true} src={'/audio-files/' + currentPlayingMix.title.toLowerCase() + ".mp3"}
                 ref={(ref) => {player = ref;}}
                 onPlay={OnPlay}
                 onLoad={OnLoaded}
