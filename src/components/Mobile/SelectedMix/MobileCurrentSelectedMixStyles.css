@@ -5,12 +5,14 @@
     margin-right: auto;
     width: 90%;
     margin-top: 5%;
+    color: #242424;
 }
 
 .mobileBottomRow {
     display: flex;
     justify-content: space-between;
     width: 90%;
+    color: #242424;
 }
 
 .mobileSelectedMixContainer {
@@ -22,6 +24,7 @@
     text-align: left;
     padding-left: 5%;
     background: none;
+    color: #242424;
 	color: inherit;
 	border: none;
 	cursor: pointer;
@@ -35,6 +38,7 @@
     font-size: 30px;
     text-align: left;
     background: none;
+    color: #242424;
 	color: inherit;
 	border: none;
 	cursor: pointer;

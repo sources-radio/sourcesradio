@@ -3,6 +3,7 @@
     padding: 0px;
     padding-bottom: 10px;
     padding-left: 5%;
+    color: #242424;
 }
 
 .mobileAboutButton{
@@ -10,11 +11,12 @@
     font-size: 20px;
     padding: 0px;
     background: none;
+    color: #242424;
 	color: inherit;
 	border: none;
 	cursor: pointer;
 	outline: inherit;
-    background-color: white;
+    background-color: #F1F1F1;
 }
 
 .mobileAboutText{
@@ -23,8 +25,9 @@
     font-size: 14px;
     line-height: 4px;
 
+    color: #242424;
     z-index: 1;
-    background-color: white;
+    background-color: #F1F1F1;
 }
 
 @font-face {

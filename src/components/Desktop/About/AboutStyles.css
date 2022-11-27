@@ -14,7 +14,8 @@
 	cursor: pointer;
 	outline: inherit;
     padding-bottom: 10px;
-    background-color: white;
+    color: #242424;
+    background-color: #F1F1F1;
 }
 
 .aboutText{
@@ -24,9 +25,10 @@
     line-height: 4px;
     padding-right: 5px;
 
+    color: #242424;
     z-index: 1;
     padding: 5px;
-    background-color: white;
+    background-color: #F1F1F1;
 }
 
 @font-face {

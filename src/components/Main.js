@@ -8,16 +8,17 @@ import Mobile from "./Mobile/Mobile";
 
 let player;
 
+
+const mix001 = require('../data/mix_001.json');
+const mix002 = require('../data/mix_002.json');
+const mix003 = require('../data/mix_003.json');
+
 export default function Main(){
-    // const isDesktop = useMediaQuery({ query: '(min-width: 1124px)' })
     const isDesktop = useMediaQuery({ query: '(min-width: 700px)' })
     const showTracklistOnDesktop = useMediaQuery({ query: '(min-width: 1230px)'})
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)'})
 
-    const mix001 = require('../data/mix_001.json');
-    const mix002 = require('../data/mix_002.json');
-    const mix003 = require('../data/mix_003.json');
     const [currentPlayingMix, setCurrentPlayingMix] = useState(mix001);
     const [currentSelectedMix, setCurrentSelectedMix] = useState(mix001);
     const [playState, setPlayState] = useState(false);
@@ -43,8 +44,6 @@ export default function Main(){
     }
 
     useEffect(() => {
-        // this.setMixArchive = this.setMixArchive.bind(this);
-
         const interval = setInterval(() => 
         {
             setCurrentTime(player.seek().toFixed(0));
@@ -86,7 +85,6 @@ export default function Main(){
                 <Mobile data={data}/>
             )
         }
-
     }
 
     function OnPlay(){
@@ -98,12 +96,11 @@ export default function Main(){
     }
 
     function OnError(mgs){
-        console.log("error: " + mgs)
+        console.log(`error: ${mgs}`)
     }
 
     function OnLoadError(mgs){
-        console.log("load error: " + mgs)
-        console.log('/audio-files/' + currentPlayingMix.title.toLowerCase() + ".mp3");
+        console.log(`load errpr: ${mgs} \n at path /audio-files/%{currentPlayingMix.title.toLowerCase()}.mp3`);
     }
 
     return (
@@ -113,26 +110,14 @@ export default function Main(){
             
             <ReactHowler 
                 playing={playState} 
-                html={true} src={'/audio-files/' + currentPlayingMix.title.toLowerCase() + ".mp3"}
+                html={true} 
+                src={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`}
                 ref={(ref) => {player = ref;}}
                 onPlay={OnPlay}
                 onLoad={OnLoaded}
                 onLoadError={OnLoadError}
                 onError={OnError}
             />
-            {/* <h1>SOURCES RADIO</h1>
-            <About aboutOpen={aboutOpen} callback={setAboutOpen} />
-            <MixArchive mixArchiveOpen={mixArchiveOpen} callback={setMixArchiveOpen} allMixes={allMixes} setMix={setMix}></MixArchive>
-            <br></br>
-            <button onClick={PauseToggle}>{playState == true ? "PAUSE" : "PLAY"}</button>
-            <p>current time: {currentTime}</p>
-            <Title title={"mix title: " + currentMix.title}></Title>
-            <p>total duration: {currentMix.duration}</p>
-            <br></br>
-            <Tracklist currentMix={currentMix}></Tracklist>
-            <br></br>
-            <p>{isDesktop ? "desktop" : "mobile"}</p>
-            <p>{isPortrait ? "portrait" : "landscape"}</p> */}
         </div>
     )
 }
