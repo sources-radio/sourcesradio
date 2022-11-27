@@ -3,14 +3,9 @@
   "duration": 1592,
   "songs": [
     {
-      "songName": "INTRO",
-      "artist": "SOURCES RADIO",
-      "time": 0
-    },
-    {
       "songName": "LOUIE BAG (LIVE)",
       "artist": "YEBBA",
-      "time": 44
+      "time": 0
     },
     {
       "songName": "CHITO’S SONG",
@@ -49,7 +44,7 @@
     },
     {
       "songName": "SERENADE OF WATER",
-      "artist": "NA",
+      "artist": "MEN I TRUST",
       "time": 1600
     }
   ]
