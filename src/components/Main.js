@@ -97,6 +97,14 @@ export default function Main(){
         console.log("On Loaded")
     }
 
+    function OnError(mgs){
+        console.log("error: " + mgs)
+    }
+
+    function OnLoadError(mgs){
+        console.log("load error" + mgs)
+    }
+
     return (
         <div>
             {/* <LandingPage ></LandingPage> */}
@@ -108,6 +116,8 @@ export default function Main(){
                 ref={(ref) => {player = ref;}}
                 onPlay={OnPlay}
                 onLoad={OnLoaded}
+                onLoadError={OnLoadError}
+                onError={OnError}
             />
             {/* <h1>SOURCES RADIO</h1>
             <About aboutOpen={aboutOpen} callback={setAboutOpen} />
