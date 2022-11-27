@@ -15,10 +15,19 @@ export default function MobileCurrentPlaying(props){
                 </div>
                 <div className='mobileBlackLine'>
             </div>
-            <div className="mobileCurrentTime">
-                {props.data.currentTime}
-            </div>        
-        </div>
+            <div className='mobileTime'>
+                <div className="mobileCurrentTime">
+                    {props.data.currentTime}
+                </div>        
+                <div className='mobileCurrentSong'>
+                    {props.data.currentSong?.song}
+                </div>
+                <div className='mobileCurrentArtist'>
+                    {props.data.currentSong?.artist}
+                </div>
+    
+            </div>
+       </div>
            
                         
         </div>

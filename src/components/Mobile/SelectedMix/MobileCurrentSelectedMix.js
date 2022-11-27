@@ -9,10 +9,12 @@ export default function MobileCurrentSelectedMix(props){
         }
         else
         {
+            console.log("calling on load")
             if(props.data.playState)
-                props.data.pauseToggle();
+                // props.data.pauseToggle();
 
             props.data.setCurrentPlayingMix(props.data.currentSelectedMix)
+            props.data.setMix();
             
             setTimeout(() => {
                 if(!props.data.playState)

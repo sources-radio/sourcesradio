@@ -30,28 +30,53 @@ export default function Main(){
 
     const mixArray = [mix001, mix002, mix003];
     const [allMixes, setAllMixes] = useState(mixArray);
+    const [currentSong, setCurrentSong] = useState()
 
-    var mixNames = mixArray.map((mixes) => '/audio-files/' + mixes.title + ".mp3");
 
     function pauseToggle(){
         setPlayState(!playState);
+        console.log(`play state ${playState}`)
     }
 
     function setMix(mix){
-        if(playState)
-            pauseToggle();
-        setCurrentPlayingMix(mix);
+        setCurrentTime("*")
+    }
+
+    function processCurrentSong(){
+        var songData = {artist: "", song:""};
+
+        for (var i = 0; i < currentPlayingMix.songs.length; i++){
+            let time = currentPlayingMix.songs[i].time;
+
+            if(time < currentTime)
+            {
+                songData.artist = currentPlayingMix.songs[i].artist;
+                songData.song = currentPlayingMix.songs[i].songName;
+                console.log(`song data: ${songData.song}`);
+            }
+        }
+
+        setCurrentSong(songData);
     }
 
     useEffect(() => {
         const interval = setInterval(() => 
         {
+            timerUpdate()
             setCurrentTime(player.seek().toFixed(0));
         }, 500);
         return () => {
             clearInterval(interval)
         }
     }, [])
+
+    useEffect(()=>{
+        processCurrentSong();
+    }, [currentTime])
+
+
+    function timerUpdate(){
+    }
 
     const site = (desktop) =>{
 
@@ -73,6 +98,8 @@ export default function Main(){
         data.showTracklistOnDesktop = showTracklistOnDesktop;
         data.isTracklistOpen = isTracklistOpen;
         data.setIsTracklistOpen = setIsTracklistOpen;
+        data.setMix = setMix;
+        data.currentSong = currentSong;
 
         if(desktop === true)
         {

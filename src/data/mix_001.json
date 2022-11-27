@@ -4,39 +4,48 @@
   "songs": [
     {
       "songName": "LOUIE BAG (LIVE)",
-      "artist": "YEBBA"
+      "artist": "YEBBA",
+      "time": 0
     },
     {
       "songName": "CHITO’S SONG",
-      "artist": "COCHEMEA"
+      "artist": "COCHEMEA",
+      "time": 20 
     },
     {
       "songName": "LAST WORDS",
-      "artist": "KENNY BEATS"
+      "artist": "KENNY BEATS",
+      "time": 25 
     },
     {
       "songName": "TENDRYL",
-      "artist": "BESHKEN"
+      "artist": "BESHKEN",
+      "time": 30
     },
     {
       "songName": "GYONGYGAJU LANY",
-      "artist": "OMEGA"
+      "artist": "OMEGA",
+      "time": 35
     },
     {
       "songName": "MORE LOVE LESS HATE",
-      "artist": "LOUIS COLE"
+      "artist": "LOUIS COLE",
+      "time": 40
     },
     {
       "songName": "CAN’T BREATHE",
-      "artist": "9TH WONDER"
+      "artist": "9TH WONDER",
+      "time": 45
     },
     {
       "songName": "BEAUTY SLEEP",
-      "artist": "AB001"
+      "artist": "AB001",
+      "time": 50
     },
     {
       "songName": "SERENADE OF WATER",
-      "artist": "NA"
+      "artist": "NA",
+      "time": 60
     }
   ]
 }

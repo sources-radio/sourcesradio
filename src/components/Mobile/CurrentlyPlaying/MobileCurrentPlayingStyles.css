@@ -39,6 +39,25 @@
     justify-content: left;
 }
 
+.mobileTime{
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileCurrentSong{
+    font-family: "ABC Medium";
+    font-size: 12px;
+    padding-left: 10px;
+    color: #242424;
+    position: flex;
+}
+
+.mobileCurrentArtist{
+font-family: "ABC Medium";
+    font-size: 12px;
+    padding-left: 10px;
+    color: #242424;
+}
 
 
 @font-face {
