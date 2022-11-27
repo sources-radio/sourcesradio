@@ -137,7 +137,7 @@ export default function Main(){
             
             <ReactHowler 
                 playing={playState} 
-                html={true} 
+                html5={true} 
                 src={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`}
                 ref={(ref) => {player = ref;}}
                 onPlay={OnPlay}
