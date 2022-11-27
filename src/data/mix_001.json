@@ -1,51 +1,56 @@
 {
   "title": "MIX_001",
-  "duration": 1285,
+  "duration": 1592,
   "songs": [
+    {
+      "songName": "INTRO",
+      "artist": "SOURCES RADIO",
+      "time": 0
+    },
     {
       "songName": "LOUIE BAG (LIVE)",
       "artist": "YEBBA",
-      "time": 0
+      "time": 44
     },
     {
       "songName": "CHITO’S SONG",
       "artist": "COCHEMEA",
-      "time": 20 
+      "time": 300 
     },
     {
       "songName": "LAST WORDS",
       "artist": "KENNY BEATS",
-      "time": 25 
+      "time": 485
     },
     {
       "songName": "TENDRYL",
       "artist": "BESHKEN",
-      "time": 30
+      "time": 592
     },
     {
       "songName": "GYONGYGAJU LANY",
       "artist": "OMEGA",
-      "time": 35
+      "time": 829
     },
     {
       "songName": "MORE LOVE LESS HATE",
       "artist": "LOUIS COLE",
-      "time": 40
+      "time": 1059
     },
     {
       "songName": "CAN’T BREATHE",
       "artist": "9TH WONDER",
-      "time": 45
+      "time": 1363
     },
     {
       "songName": "BEAUTY SLEEP",
       "artist": "AB001",
-      "time": 50
+      "time": 1400
     },
     {
       "songName": "SERENADE OF WATER",
       "artist": "NA",
-      "time": 60
+      "time": 1600
     }
   ]
 }

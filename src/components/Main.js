@@ -11,6 +11,7 @@ let player;
 
 const mix001 = require('../data/mix_001.json');
 const mix002 = require('../data/mix_002.json');
+const mix003 = require('../data/mix_003.json');
 
 export default function Main(){
     const isDesktop = useMediaQuery({ query: '(min-width: 700px)' })
@@ -27,7 +28,7 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
-    const mixArray = [mix001, mix002];
+    const mixArray = [mix001, mix002, mix003];
     const [allMixes, setAllMixes] = useState(mixArray);
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
 
@@ -72,6 +73,11 @@ export default function Main(){
     useEffect(()=>{
         processCurrentSong();
     }, [currentTime])
+
+    var OnEnd = () => {
+        console.log("on end");
+            this.player.stop();
+    }
 
 
     function timerUpdate(){
@@ -139,10 +145,12 @@ export default function Main(){
                 html5={true} 
                 src={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`}
                 ref={(ref) => {player = ref;}}
+                loop={true}
                 onPlay={OnPlay}
                 onLoad={OnLoaded}
                 onLoadError={OnLoadError}
                 onError={OnError}
+                onEnd={pauseToggle}
             />
         </div>
     )
