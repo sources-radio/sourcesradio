@@ -15,9 +15,17 @@ export default function Transport(props){
             <div className='blackLine'>
 
             </div>
-            <div className="currentTime">
-                {props.data.currentTime}
+            <div className='currentInfo'>
+                <div className="currentTime">
+                    {props.data.currentTime}
+                </div> 
+                <pre className='currentSong'>
+                    {props.data.currentSong?.song}
+                </pre>
+                <pre className='currentArtist'>
+                    {props.data.currentSong?.artist}
+                </pre>
             </div>
-        </div>
+       </div>
     )
 }

@@ -30,7 +30,7 @@ export default function Main(){
 
     const mixArray = [mix001, mix002, mix003];
     const [allMixes, setAllMixes] = useState(mixArray);
-    const [currentSong, setCurrentSong] = useState()
+    const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
 
 
     function pauseToggle(){
@@ -43,7 +43,7 @@ export default function Main(){
     }
 
     function processCurrentSong(){
-        var songData = {artist: "", song:""};
+        var songData = {artist: " ", song:" "};
 
         for (var i = 0; i < currentPlayingMix.songs.length; i++){
             let time = currentPlayingMix.songs[i].time;
