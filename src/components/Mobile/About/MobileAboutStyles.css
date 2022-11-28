@@ -16,7 +16,6 @@
 	border: none;
 	cursor: pointer;
 	outline: inherit;
-    background-color: #F1F1F1;
 }
 
 .mobileAboutText{
@@ -27,7 +26,6 @@
 
     color: #242424;
     z-index: 1;
-    background-color: #F1F1F1;
 }
 
 @font-face {
