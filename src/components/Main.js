@@ -52,7 +52,6 @@ export default function Main(){
             {
                 songData.artist = currentPlayingMix.songs[i].artist;
                 songData.song = currentPlayingMix.songs[i].songName;
-                console.log(`song data: ${songData.song}`);
             }
         }
 

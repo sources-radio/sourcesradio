@@ -11,7 +11,6 @@ export default function Transport(props){
         return num;
     }
 
-    console.log( props.data.currentTime)
     let pos = ((Number(props.data.currentTime) / Number(props.data.currentPlayingMix.duration) * (window.innerWidth - 300)));
     let transportPos = {
         left: `${210 + pos}px`
