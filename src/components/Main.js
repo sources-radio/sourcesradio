@@ -131,7 +131,7 @@ export default function Main(){
 
     return (
         <div>
-            {/* <LandingPage ></LandingPage> */}
+            <LandingPage />
             {site(isDesktop)}
             
             <ReactHowler 
