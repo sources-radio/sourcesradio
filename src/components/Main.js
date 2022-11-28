@@ -38,10 +38,6 @@ export default function Main(){
         console.log(`play state ${playState}`)
     }
 
-    function setMix(mix){
-        setCurrentTime("*")
-    }
-
     function processCurrentSong(){
         var songData = {artist: " ", song:" "};
 
@@ -102,7 +98,6 @@ export default function Main(){
         data.showTracklistOnDesktop = showTracklistOnDesktop;
         data.isTracklistOpen = isTracklistOpen;
         data.setIsTracklistOpen = setIsTracklistOpen;
-        data.setMix = setMix;
         data.currentSong = currentSong;
 
         if(desktop === true)

@@ -9,7 +9,7 @@ export default function MixArchive(props){
                     props.data.setCurrentSelectedMix(mix);
                     props.data.setMixArchiveOpen(!props.data.mixArchiveOpen)
                 }
-                }>{mix.title}
+                }>{mix.title}{props.data.currentSelectedMix.title === mix.title ? "-" : ""}
             </button>
         </div>
    );

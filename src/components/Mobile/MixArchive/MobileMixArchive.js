@@ -9,7 +9,7 @@ export default function MobileMixArchive(props)
                     props.data.setCurrentSelectedMix(mix);
                     props.data.setMixArchiveOpen(!props.data.mixArchiveOpen)
                 }
-                }>{mix.title}
+                }>{props.data.currentSelectedMix.title === mix.title ? "-" : ""}{mix.title}
             </button>
         </div>
    );
