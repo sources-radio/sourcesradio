@@ -14,14 +14,16 @@ export default function MobileTracklist(props){
     var halfCount = count / 2.0;
     
     const tracks1 = props.data.currentSelectedMix.songs.map((song) => {
-        
+        if(song.showInTracklist === true)
+        {
             return (
                 <div key={Math.random()}>
                     <div className="mobileSong">{song.songName}</div>
                     <div className="mobileArtist">{song.artist}</div>
                 </div>
             );
-    })
+        } 
+   })
 
     return (
         <div className='mobileTracklist'>

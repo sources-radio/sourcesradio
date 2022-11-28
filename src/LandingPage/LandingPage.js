@@ -4,7 +4,7 @@ import "../fonts/ABCFavoritMonoEdu-Medium.otf"
 export default function LandingPage()
 {
     return(
-            <div className="background">
+            <div className="landingBackground">
                 <div className="center">
                     <p className="sourcesradio">SOURCES RADIO</p>
                     <div className="bottomrow">

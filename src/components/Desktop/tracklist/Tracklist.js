@@ -7,24 +7,30 @@ export default function Tracklist(props){
         return;
 
     var count = props.data.currentPlayingMix.songs.length;
-    var halfCount = count / 2.0;
+    var halfCount = count / 2;
+    halfCount = Math.round(halfCount--);
     var index1 = 0;
     var index2 = 0;
 
     const tracks1 = props.data.currentSelectedMix.songs.map((song) => {
-        if(index1++ < halfCount)
+        if(song.showInTracklist === true)
         {
-            return (
-                <div key={Math.random()}>
-                    <div className="song">{song.songName}</div>
-                    <div className="artist">{song.artist}</div>
-                </div>
-            );
+            if(index1++ < 4)
+            {
+                return (
+                    <div key={Math.random()}>
+                        <div className="song">{song.songName}</div>
+                        <div className="artist">{song.artist}</div>
+                    </div>
+                );
+            } 
         }
     })
 
     const tracks2 = props.data.currentSelectedMix.songs.map((song) => {
-            if(index2++ > halfCount)
+        if(song.showInTracklist === true)
+        {
+            if(index2++ > 4)
             {
                 return (
                     <div key={Math.random()}>
@@ -33,6 +39,7 @@ export default function Tracklist(props){
                     </div>
                 );
             }
+        }
     })
 
     return(

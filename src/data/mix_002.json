@@ -1,38 +1,72 @@
 {
   "title": "MIX_002",
-  "duration": 1783,
+  "duration": 1694,
   "songs": [
     {
-      "songName": "CAN’T BREATHE",
-      "artist": "8TH WONDER"
+      "songName": "INTRO",
+      "artist": "SOURCES RADIO",
+      "time": 0,
+      "showInTracklist": false
     },
     {
-      "songName": "BEAUTY SLEEP",
-      "artist": "AB000"
+      "songName": "I DON'T WANNA GO TO SCHOOL",
+      "artist": "DEATON CHRIS ANTHONY",
+      "time": 46,
+      "showInTracklist": true
     },
     {
-      "songName": "SERENADE OF WATER",
-      "artist": "NA"
+      "songName": "DIDN'T I",
+      "artist": "LOU VAL",
+      "time": 186,
+      "showInTracklist": true
     },
     {
-      "songName": "CHITO’S SONG",
-      "artist": "COCHEMEA"
+      "songName": "BAD HABIT",
+      "artist": "STEVE LACY",
+      "time": 290,
+      "showInTracklist": true
     },
     {
-      "songName": "LAST WORDS",
-      "artist": "KENNY BEATS"
+      "songName": "A DAY IN THE PARK",
+      "artist": "RYUICHI SAKAMOTO",
+      "time": 520,
+      "showInTracklist": true
     },
     {
-      "songName": "TENDRYL",
-      "artist": "BESHKEN"
+      "songName": "PROBLEMS",
+      "artist": "FLOATING POINTS",
+      "time": 718,
+      "showInTracklist": true
     },
     {
-      "songName": "GYONGYGAJU LANY",
-      "artist": "OMEGA"
+      "songName": "MAGAZINE",
+      "artist": "TORO Y MOI",
+      "time": 956,
+      "showInTracklist": true
     },
     {
-      "songName": "MORE LOVE LESS HATE",
-      "artist": "LOUIS COLE"
+      "songName": "LOST KIDS GET MONEY",
+      "artist": "BRENT FAIYAZ",
+      "time": 1131,
+      "showInTracklist": true
+    },
+    {
+      "songName": "AURABLU",
+      "artist": "FLOWER CHILD",
+      "time": 1278,
+      "showInTracklist": true
+    },
+    {
+      "songName": "WHAT A DAY",
+      "artist": "IVAN AVE",
+      "time": 1434,
+      "showInTracklist": true
+    },
+    {
+      "songName": "OUTRO",
+      "artist": "SOURCES RADIO",
+      "time": 1643,
+      "showInTracklist": false
     }
   ]
 }

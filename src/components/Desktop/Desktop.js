@@ -4,11 +4,13 @@ import Transport from "./CurrentlyPlaying/Transport";
 import CurrentSelectedMix from "./SelectedMix/CurrentSelectedMix";
 import TopTitle from "./TopTitle/TopTitle";
 import Tracklist from "./tracklist/Tracklist";
+import './DesktopStyles.css'
 
 export default function Desktop(props){
     
     return(
-        <div>
+        // <div className="backgroundImage" style={{backgroundImage: "url(/img/img1.png)"}}>
+        <div className="backgroundImage">
             <TopTitle/>
             <CurrentSelectedMix data={props.data}></CurrentSelectedMix>
             <Transport data={props.data}/>
