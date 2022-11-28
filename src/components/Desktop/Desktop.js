@@ -9,16 +9,14 @@ import './DesktopStyles.css'
 export default function Desktop(props){
     
     return(
-        // <div className="backgroundImage" style={{backgroundImage: "url(/img/img1.png)"}}>
-        <div className="backgroundImage">
-            <TopTitle/>
+        <div>
+            <TopTitle data={props.data}/>
             <CurrentSelectedMix data={props.data}></CurrentSelectedMix>
             <Transport data={props.data}/>
             <About data={props.data}></About>
             <MixArchive data={props.data} />
             <Tracklist data={props.data} />
-            {/* {// this is how all the data is being passed down} */}
-            {/* <button onClick={() => props.data.setCurrentMix(props.data.allMixes[1])}></button> */}
+            <div className="backgroundImage" style={{backgroundImage: "url(/img/img3.png)"}}></div>
         </div>
     )
 }

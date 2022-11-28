@@ -103,6 +103,7 @@ export default function Main(){
         data.isTracklistOpen = isTracklistOpen;
         data.setIsTracklistOpen = setIsTracklistOpen;
         data.currentSong = currentSong;
+        data.textColor = textColor;
 
         if(desktop === true)
         {

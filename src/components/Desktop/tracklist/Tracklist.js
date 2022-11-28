@@ -3,8 +3,8 @@ import "./TracklistStyles.css"
 export default function Tracklist(props){
 
 
-    if(!props.data.showTracklistOnDesktop)
-        return;
+    // if(!props.data.showTracklistOnDesktop)
+        // return;
 
     var count = props.data.currentPlayingMix.songs.length;
     var halfCount = count / 2;
@@ -19,8 +19,8 @@ export default function Tracklist(props){
             {
                 return (
                     <div key={Math.random()}>
-                        <div className="song">{song.songName}</div>
-                        <div className="artist">{song.artist}</div>
+                        <div className="song" style={{color: props.data.textColor}}>{song.songName}</div>
+                        <div className="artist" style={{color: props.data.textColor}}>{song.artist}</div>
                     </div>
                 );
             } 
@@ -34,8 +34,8 @@ export default function Tracklist(props){
             {
                 return (
                     <div key={Math.random()}>
-                        <div className="song">{song.songName}</div>
-                        <div className="artist">{song.artist}</div>
+                        <div className="song" style={{color: props.data.textColor}}>{song.songName}</div>
+                        <div className="artist" style={{color: props.data.textColor}}>{song.artist}</div>
                     </div>
                 );
             }

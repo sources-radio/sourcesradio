@@ -3,7 +3,7 @@ import './AboutStyles.css'
 export default function About(props){
 
     var aboutString = (
-        <div className='aboutText'>
+        <div className='aboutText' style={{color: props.data.textColor}}>
             <p>(C)</p>
             <p>SRCSRADIO</p>
             <p>SRCSRADIO[at]GMAIL.COM</p>
@@ -21,8 +21,8 @@ export default function About(props){
     }
 
     return (
-        <div className='aboutContainer'>
-            <button className='aboutButton' onClick={OnClick}>ABOUT ↓</button>
+        <div className='aboutContainer' style={{color: props.data.textColor}}>
+            <button className='aboutButton' style={{color: props.data.textColor}} onClick={OnClick}>ABOUT ↓</button>
             <div>{props.data.aboutOpen ? aboutString : null}</div>
         </div>
     )
