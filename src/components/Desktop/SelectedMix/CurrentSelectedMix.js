@@ -10,9 +10,6 @@ export default function SelectedMix(props){
         }
         else
         {
-            if(props.data.playState)
-                // props.data.pauseToggle();
-
             props.data.setCurrentPlayingMix(props.data.currentSelectedMix)
             
             setTimeout(() => {
