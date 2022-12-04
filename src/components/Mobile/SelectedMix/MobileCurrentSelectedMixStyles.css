@@ -13,12 +13,12 @@
 
 .mobilePlayButton{
     font-family: "ABC Medium";
-    padding-top: 1vw;
     background: none;
     color: #242424;
 	border: none;
     margin: 0px;
     padding: 0px;
+    padding-top: 1.2vw;
 
 }
 
