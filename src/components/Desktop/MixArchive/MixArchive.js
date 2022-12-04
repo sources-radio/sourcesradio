@@ -21,7 +21,7 @@ export default function MixArchive(props){
 
     return(
         <div className="mixArchiveContainer">
-            <button className="mixArchiveButton" style={{color: props.data.textColor}} onClick={OnClick}>MIX ARCHIVE ↓</button>
+            <button className="mixArchiveButton" style={{color: props.data.textColor}} onClick={OnClick}>MIX ARCHIVE {props.data.mixArchiveOpen ? "↓" : "->"}</button>
             {props.data.mixArchiveOpen ? mixes : null}
         </div>
     )

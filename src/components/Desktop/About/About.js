@@ -22,7 +22,7 @@ export default function About(props){
 
     return (
         <div className='aboutContainer' style={{color: props.data.textColor}}>
-            <button className='aboutButton' style={{color: props.data.textColor}} onClick={OnClick}>ABOUT ↓</button>
+            <button className='aboutButton' style={{color: props.data.textColor}} onClick={OnClick}>ABOUT {props.data.aboutOpen ? "↓" : "->"}</button>
             <div>{props.data.aboutOpen ? aboutString : null}</div>
         </div>
     )
