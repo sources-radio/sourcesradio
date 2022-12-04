@@ -11,24 +11,47 @@ export default function MobileTracklist(props){
 
     var index = 0;
     var count = props.data.currentPlayingMix.songs.length;
-    var halfCount = count / 2.0;
     
     const tracks1 = props.data.currentSelectedMix.songs.map((song) => {
         if(song.showInTracklist === true)
         {
-            return (
-                <div key={Math.random()}>
-                    <div className="mobileSong">{song.songName}</div>
-                    <div className="mobileArtist">{song.artist}</div>
-                </div>
-            );
+            if(index++ < 4)
+            {
+                return (
+                    <div key={Math.random()}>
+                        <div className="mobileSong">{song.songName}</div>
+                        <div className="mobileArtist">{song.artist}</div>
+                    </div>
+                );
+            }
         } 
-   })
+    })
+
+
+    var index2 = 0;
+    const tracks2 = props.data.currentSelectedMix.songs.map((song) => {
+        if(song.showInTracklist === true)
+        {
+            if(index2++ > 4)
+            {
+                return (
+                    <div key={Math.random()}>
+                        <div className="mobileSong">{song.songName}</div>
+                        <div className="mobileArtist">{song.artist}</div>
+                    </div>
+                );
+            }
+        } 
+    })
+
 
     return (
         <div className='mobileTracklist'>
-            <button className='mobileTracklistButton' onClick={OnClick}>TRACKLIST ↓</button>
-            <div>{props.data.isTracklistOpen ? tracks1 : null}</div>
-        </div>
+            <button className='mobileTracklistButton' onClick={OnClick}>TRACKLIST {props.data.isTracklistOpen ? "↓" : "->"}</button>
+            <div className='mobileTracklistColumns'>
+                <div>{props.data.isTracklistOpen ? tracks1 : null}</div>
+                <div>{props.data.isTracklistOpen ? tracks2 : null}</div>
+            </div>
+       </div>
     )
 }

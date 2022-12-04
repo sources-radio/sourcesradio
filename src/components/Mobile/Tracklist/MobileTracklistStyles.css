@@ -1,13 +1,10 @@
 .mobileTracklist {
-    padding-top: 40px;
-padding-left: 5%;
-padding-bottom: 20px;
-
+    padding-bottom: 3%;
 }
 
 .mobileSong {
     font-family: "ABC Medium";
-    font-size: 15px;
+    font-size: 3vw;
     margin: 0px;
     padding: 0;
     line-height: 0px;
@@ -28,9 +25,14 @@ padding-bottom: 20px;
     color: #242424;
 }
 
+.mobileTracklistColumns
+{
+    display: flex;
+}
+
 .mobileTracklistButton {
     font-family: "ABC Medium";
-    font-size: 20px;
+    font-size: 6vw;
 	color: inherit;
 	border: none;
 	cursor: pointer;
@@ -38,5 +40,7 @@ padding-bottom: 20px;
     align-items: left;
     text-align: left;
     color: #242424;
+    margin: 0px;
+    left: 0px;
     background-color: rgba(255, 255, 255, 0);
 }
