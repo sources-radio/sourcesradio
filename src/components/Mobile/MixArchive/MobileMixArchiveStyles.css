@@ -1,6 +1,5 @@
 .mobileMixArchiveContainer{
     padding: 0px;
-    padding-left: 5%;
     padding-bottom: 20px;
 
 }
@@ -8,7 +7,7 @@
 .mobileMixArchiveButton{
     text-align: left;
     font-family: "ABC Medium";
-    font-size: 20px;
+    font-size: 6vw;
     background: none;
 	color: inherit;
 	border: none;

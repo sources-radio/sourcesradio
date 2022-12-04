@@ -4,14 +4,9 @@ export default function MobileAbout(props){
 
     var aboutString = (
         <div className='mobileAboutText'>
-            <p>(C)</p>
-            <p>SRCSRADIO</p>
-            <br></br>
-            <p>(IG)</p>
-            <p>@ SOURCESRADIO</p>
-            <br></br>
-            <p>LOS ANGELES</p>
-            <p>CALIFORNIA</p>
+            <p>(C)SRCSRADIO</p>
+            <p>(IG)@ SOURCESRADIO</p>
+            <p>LOS ANGELES, CA</p>
         </div>
     );
 
@@ -23,7 +18,7 @@ export default function MobileAbout(props){
     
     return (
         <div className="mobileAbout">
-            <button className="mobileAboutButton" onClick={OnClick}>ABOUT ↓</button>
+            <button className="mobileAboutButton" onClick={OnClick}>SRCS©</button>
             {props.data.aboutOpen ? aboutString : ""}
         </div>
     )

@@ -1,46 +1,24 @@
 .mobileSelectedMix {
-    padding-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-top: 5%;
+    font-family: "Founders Semibold";
+    font-size: 16vw;
     color: #242424;
-}
-
-.mobileBottomRow {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    color: #242424;
+    padding: 0px;
 }
 
 .mobileSelectedMixContainer {
+    display: flex;
+
+    padding: 0px;
 }
 
 .mobilePlayButton{
     font-family: "ABC Medium";
-    font-size: 30px;
-    text-align: left;
-    padding-left: 5%;
+    padding-top: 1vw;
     background: none;
     color: #242424;
-	color: inherit;
 	border: none;
-	cursor: pointer;
-	outline: inherit;
+    margin: 0px;
+    padding: 0px;
+
 }
 
-.mobileDuration{
-    position:absolute;
-    right: 5%;
-    font-family: "ABC Medium";
-    font-size: 30px;
-    text-align: left;
-    background: none;
-    color: #242424;
-	color: inherit;
-	border: none;
-	cursor: pointer;
-	outline: inherit;
-}

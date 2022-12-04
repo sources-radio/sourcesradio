@@ -1,4 +1,5 @@
 import './MobileCurrentSelectedMixStyles.css'
+import { ImPause2, ImPlay3 } from 'react-icons/im'
 
 export default function MobileCurrentSelectedMix(props){
 
@@ -22,26 +23,22 @@ export default function MobileCurrentSelectedMix(props){
     {
         if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
-            return(props.data.playState ? "PAUSE" : "PLAY")
+            return(props.data.playState ? null :  <ImPlay3 size={window.innerWidth/12}/>)
         }
         else
         {
-            return("PLAY");
+            return(<ImPlay3 size={window.innerWidth/12}/>);
         }
     }
 
     return(
         <div>
             <div className='mobileSelectedMixContainer'>
-                <img className='mobileSelectedMix' src={'./mixTitles/' + props.data.currentSelectedMix.title + ".png"} />
-                <div className="mobileBottomRow">
-                    <button className='mobilePlayButton' onClick={setNewMix}>
+               <button className='mobilePlayButton' onClick={setNewMix}>
                         {getPlayPauseButton()}
-                    </button>
-                    <div className='mobileDuration'>
-                        D: {props.data.currentSelectedMix.duration}
-                    </div>
-                </div>
+                    </button> 
+                <div className='mobileSelectedMix'>{props.data.currentSelectedMix.title}</div>
+                
             </div>
         </div>
     )

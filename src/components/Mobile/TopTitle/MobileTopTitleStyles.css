@@ -1,8 +1,14 @@
 .mobileTop {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-top: 5%;
+    font-family: "Founders Semibold";
+    margin-top: 3%;
+    margin-left: 3%;
     color: #242424;
+    font-size: 8vw;
+    text-align: left;
+}
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
 }

@@ -4,7 +4,7 @@ export default function MobileTopTitle(props){
 
     return(
         <div>
-            <img className='mobileTop' src="./logo/SOURCES RADIO.png" alt="sources logo"></img>
+            <p className='mobileTop'>SOURCES RADIO</p>
         </div>
     )
 

@@ -1,61 +1,71 @@
 .mobileCurrentPlaying{
+    position: absolute;
     padding-top: 80px;
-    padding-left: 5%;
-    padding-right: 5%;
+    bottom: 3%;
+    left: 3%;
     color: #242424;
 }
 
 .mobilePlayPause{
-    padding-top: 4px;
+    padding-top: .7vw;
     color: #242424;
+    
 }
 
 .mobileCurrentTime{
     font-family: "ABC Medium";
-    font-size: 30px;
-    padding-left: 10px;
+    font-size: 8vw;
     color: #242424;
 }
 
 .mobileBlackLine{
     background-color: #242424;
-    width: 3px;
-    height: 69px;
-    margin-left: 10px;
-    margin-top: 5px;
+    width: 0.7vw;
+    height: auto;
+
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: 1.2vw;
     color: #242424;
 }
 
 .mobileCurrentMix{
     font-family: "ABC Medium";
-    font-size: 30px;
+    font-size: 6.5vw;
     padding-left: 10px;
+    color: #242424;
+}
+
+.mobileCurrentMixDuration{
+    white-space: pre;
+    font-family: "ABC Medium";
+    font-size: 6.5vw;
+    padding-left: 10px;
+    display:flex ;
     color: #242424;
 }
 
 .mobileControl
 {
     display: flex;
-    justify-content: left;
 }
 
 .mobileTime{
     display: flex;
+    font-size: 8vw;
     flex-direction: column;
 }
 
 .mobileCurrentSong{
     font-family: "ABC Medium";
-    font-size: 12px;
-    padding-left: 10px;
+    font-size: 4vw;
     color: #242424;
     position: flex;
 }
 
 .mobileCurrentArtist{
 font-family: "ABC Medium";
-    font-size: 12px;
-    padding-left: 10px;
+    font-size: 3vw;
     color: #242424;
 }
 
