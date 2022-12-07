@@ -42,20 +42,30 @@ export default function Tracklist(props){
         }
     })
 
-    return(
-        <div className="main">
-            <div className="container1">
-                <ul>
-                    {tracks1}
-                </ul>
-            </div>
-            
-            <div className="container2">
-                <ul>
-                    {tracks2}
-                </ul>
-            </div>
+    function tracklist(){
+        if(props.data.isTracklistOpen)
+        {
+            return(
+                <div className="main">
+                    <div className="container1">
+                        <ul>
+                            {tracks1}
+                        </ul>
+                    </div>
+                    
+                    <div className="container2">
+                        <ul>
+                            {tracks2}
+                        </ul>
+                    </div>
 
-        </div>
+                </div>
+            )
+        }
+        
+    }
+
+    return(
+        tracklist()
     )
 }

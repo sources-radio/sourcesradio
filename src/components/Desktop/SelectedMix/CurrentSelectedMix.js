@@ -3,6 +3,14 @@ import { ImPause2, ImPlay3 } from 'react-icons/im'
 
 export default function SelectedMix(props){
 
+    const handleMouseOver = () => {
+        props.data.setIsTracklistOpen(true);
+    };
+
+    const handleMouseOut = () => {
+        props.data.setIsTracklistOpen(false);
+    };
+
     function setNewMix(){
         if(props.data.currentSelectedMix.title === props.data.currentPlayingMix.title)
         {
@@ -27,7 +35,7 @@ export default function SelectedMix(props){
         }
         else
         {
-            return("PLAY");
+            return(<ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay" style={{color: props.data.textColor}}/>);
         }
     }
 
@@ -37,7 +45,7 @@ export default function SelectedMix(props){
                 {getPlayPauseButton()}
             </button>
 
-            <div className="title" style={{color: props.data.textColor}}>
+            <div className="title" style={{color: props.data.textColor}} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                                 
                 {props.data.currentSelectedMix.title}
             </div>
