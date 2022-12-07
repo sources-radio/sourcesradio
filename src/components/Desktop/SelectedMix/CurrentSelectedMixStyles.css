@@ -1,46 +1,35 @@
 .title {
     font-family: "Founders Semibold";
-    font-size: 10vw;
+    font-size: 8vw;
     text-align: left;
+    line-height: 6vw;
 }
 
 .pauseToggle {
     font-family: "ABC Medium";
     font-size: 30px;
-    text-align: left;
     background: none;
 	color: inherit;
 	border: none;
 	cursor: pointer;
 	outline: inherit;
     color: #242424;
-    padding: 0;
+    padding-top: 0.6vw;
+    margin: 0px;
 }
 
-img {
-    width: 100%;
-}
-
-.duration { 
-    font-family: "ABC Medium";
-    font-size: 30px;
-    text-align: left;
-    color: #242424;
-    padding: 0;
-}
-
-.bottomRow {
-    display: flex;
-    justify-content: space-between;
+.selectedPlay {
+    padding: 0px;
+    margin: 0px;
+    font-size: 5vw;
 }
 
 .current {
-    width: 30%;
-    padding-left: 35px;
     position: absolute;
     top:50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    display: flex;
 }
 
 @font-face {

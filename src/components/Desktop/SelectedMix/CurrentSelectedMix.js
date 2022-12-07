@@ -1,7 +1,7 @@
 import "./CurrentSelectedMixStyles.css"
+import { ImPause2, ImPlay3 } from 'react-icons/im'
 
 export default function SelectedMix(props){
-
 
     function setNewMix(){
         if(props.data.currentSelectedMix.title === props.data.currentPlayingMix.title)
@@ -23,7 +23,7 @@ export default function SelectedMix(props){
     {
         if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
-            return(props.data.playState ? "PAUSE" : "PLAY")
+            return(props.data.playState ? null : <ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay" style={{color: props.data.textColor}}/>)
         }
         else
         {
@@ -33,16 +33,13 @@ export default function SelectedMix(props){
 
     return(
         <div className="current">
+            <button onClick={setNewMix} className="pauseToggle" style={{color: props.data.textColor}}>
+                {getPlayPauseButton()}
+            </button>
+
             <div className="title" style={{color: props.data.textColor}}>
+                                
                 {props.data.currentSelectedMix.title}
-                <div className="bottomRow">
-                    <button onClick={setNewMix} className="pauseToggle" style={{color: props.data.textColor}}>
-                        {getPlayPauseButton()}
-                    </button>
-                    <div className="duration" style={{color: props.data.textColor}}>
-                        D: {props.data.currentSelectedMix.duration}
-                    </div>
-                </div>
             </div>
        </div>
    )

@@ -1,13 +1,13 @@
 .aboutContainer{
     position: absolute;
-    right: 20px;
+    right: 120px;
     top: 20px;
     text-align: right;
 }
 
 .aboutButton{
     font-family: "ABC Medium";
-    font-size: 30px;
+    font-size: 26px;
     background: none;
 	color: inherit;
 	border: none;

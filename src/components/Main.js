@@ -35,7 +35,8 @@ export default function Main(){
     const mixArray = [mix001, mix002];
     const [allMixes, setAllMixes] = useState(mixArray);
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
-    const [textColor, setTextColor] = useState(color.white);
+    const [textColor, setTextColor] = useState(color.black);
+    const [backgroundColor, setBackgroundColor] = useState(color.white)
 
     function pauseToggle(){
         setPlayState(!playState);
@@ -78,7 +79,19 @@ export default function Main(){
             this.player.stop();
     }
 
-
+    function toggleColor()
+    {
+        if(textColor == color.white)
+        {
+            setTextColor(color.black)
+            setBackgroundColor(color.white)
+        }
+        else{
+            setTextColor(color.white)
+            setBackgroundColor(color.black)
+        }
+    }
+    
     function timerUpdate(){
     }
 
@@ -104,6 +117,8 @@ export default function Main(){
         data.setIsTracklistOpen = setIsTracklistOpen;
         data.currentSong = currentSong;
         data.textColor = textColor;
+        data.backgroundColor = backgroundColor;
+        data.toggleColor = toggleColor;
 
         if(desktop === true)
         {

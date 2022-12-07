@@ -5,14 +5,14 @@
     /* height: 100%; */
     margin: auto;
     background-size: cover;
-    background-color: #1b181885;
+    background-color: #000000;
     z-index: -2;
     background-position: center;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    filter: brightness(80%);
+    /* filter: brightness(80%); */
     overflow: hidden;
 }
 
