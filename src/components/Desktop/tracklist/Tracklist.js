@@ -45,10 +45,8 @@ export default function Tracklist(props){
     })
 
     function tracklist(){
-        if(props.data.isTracklistOpen)
-        {
             return(
-                <div className="main">
+                <div className={`main ${props.data.isTracklistOpen ? "visible" : "hidden"}`}>
                     <div className="container1">
                         <ul>
                             {tracks1}
@@ -63,8 +61,6 @@ export default function Tracklist(props){
 
                 </div>
             )
-        }
-        
     }
 
     return(
