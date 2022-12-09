@@ -1,17 +1,17 @@
 .mobileAbout{
-
     position: absolute;
-    top: 3%;
-    right: 3%;
-    padding: 0px;
+    top: 5px;
+    right: 0px;
+    margin-top: 3%;
+    margin-right: 3%;
     text-align: right;
     color: #242424;
 }
 
 .mobileAboutButton{
     font-family: "ABC Medium";
-    font-size: 3.5vw;
-    padding: 0px;
+    font-size: 6vw;
+    text-align: right;
     background: none;
     color: #242424;
 	color: inherit;
@@ -26,6 +26,7 @@
     font-size: 3.5vw;
     line-height: 4px;
     padding-top: 2vh;
+    padding-right: 10px;
 
     color: #242424;
     color: #242424;

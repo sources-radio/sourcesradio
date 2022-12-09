@@ -18,7 +18,7 @@ export default function MobileAbout(props){
     
     return (
         <div className="mobileAbout">
-            <button className="mobileAboutButton" onClick={OnClick}>SRCS©</button>
+            <button className="mobileAboutButton" onClick={OnClick}>i</button>
             {props.data.aboutOpen ? aboutString : ""}
         </div>
     )

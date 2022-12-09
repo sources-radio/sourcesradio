@@ -4,7 +4,7 @@ export default function MixArchive(props){
 
     const mixes = props.data.allMixes.map((mix) =>
         <div key={Math.random()}>
-            <button key={Math.random()} className='mixArchives' style={{color: props.data.textColor}} onClick={
+            <button key={Math.random()} className='mixArchives transitionText' style={{color: props.data.textColor}} onClick={
                 () => {
                     props.data.setCurrentSelectedMix(mix);
                     props.data.setMixArchiveOpen(!props.data.mixArchiveOpen)
@@ -20,9 +20,11 @@ export default function MixArchive(props){
     }
 
     return(
-        <div className="mixArchiveContainer">
-            <button className="mixArchiveButton" style={{color: props.data.textColor}} onClick={OnClick}>ARCHIVE{props.data.mixArchiveOpen ? "" : ""}</button>
-            {props.data.mixArchiveOpen ? mixes : null}
+        <div className="mixArchiveContainer transitionText">
+            <button className="mixArchiveButton transitionText" style={{color: props.data.textColor}} onClick={OnClick}>ARCHIVE{props.data.mixArchiveOpen ? "" : ""}</button>
+            <div className='mixText transitionText'>
+                {props.data.mixArchiveOpen ? mixes : null}
+            </div>
         </div>
     )
 }

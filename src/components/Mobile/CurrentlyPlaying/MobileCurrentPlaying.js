@@ -3,7 +3,7 @@ import { ImPause2, ImPlay3 } from 'react-icons/im'
 
 export default function MobileCurrentPlaying(props){
 
-    var button = props.data.playState ? <ImPause2 onClick={() => props.data.pauseToggle()} size={window.innerWidth/18}  className="mobilePlayPause"/> : <ImPlay3 size={window.innerWidth/18} onClick={() => props.data.pauseToggle()} className="mobilePlayPause"/>
+    var button = props.data.playState ? <ImPause2 onClick={() => props.data.pauseToggle()}   className="mobilePlayPause"/> : <ImPlay3 onClick={() => props.data.pauseToggle()} className="mobilePlayPause"/>
     
     function pad(num, size) {
         num = num.toString();
@@ -27,7 +27,7 @@ export default function MobileCurrentPlaying(props){
                 </div>
                 <div className='mobileTime'>
                     <div className="mobileCurrentTime">
-                        {pad(props.data.currentTime, 4)}
+                        {props.data.currentTime > 0 ? pad(props.data.currentTime, 4) : ""}
                     </div>        
                     <div className='mobileCurrentSong'>
                         {props.data.currentSong?.song}

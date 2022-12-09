@@ -3,6 +3,7 @@
     font-size: 16vw;
     color: #242424;
     padding: 0px;
+    padding-left: 5px;
 }
 
 .mobileSelectedMixContainer {
@@ -19,6 +20,5 @@
     margin: 0px;
     padding: 0px;
     padding-top: 1.2vw;
-
 }
 

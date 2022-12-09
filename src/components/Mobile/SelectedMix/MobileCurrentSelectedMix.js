@@ -37,7 +37,7 @@ export default function MobileCurrentSelectedMix(props){
                <button className='mobilePlayButton' onClick={setNewMix}>
                         {getPlayPauseButton()}
                     </button> 
-                <div className='mobileSelectedMix'>{props.data.currentSelectedMix.title}</div>
+                <div className='mobileSelectedMix' onClick={setNewMix}>{props.data.currentSelectedMix.title}</div>
                 
             </div>
         </div>

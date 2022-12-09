@@ -11,9 +11,10 @@ export default function Transport(props){
         return num;
     }
 
+    const truncate = (input) => input.length > 18 ? `${input.substring(0, 18)}...` : input;
     let pos = ((Number(props.data.currentTime) / Number(props.data.currentPlayingMix.duration) * (window.innerWidth - 300)));
     let transportPos = {
-        left: `${200 + pos}px`,
+        left: `${175 + pos}px`,
         color: props.data.textColor
     }
     
@@ -21,23 +22,23 @@ export default function Transport(props){
     return(
         <div className="transport">
             {button}
-            <div className="currentMix" style={{color: props.data.textColor}}>
+            <div className="currentMix transitionText" style={{color: props.data.textColor}}>
                 {props.data.currentPlayingMix.title}
             </div>
-            <div className="currentDuration" style={{color: props.data.textColor}}>
+            <div className="currentDuration transitionText" style={{color: props.data.textColor}}>
                 (D){props.data.currentPlayingMix.duration}
             </div>
             <div className='blackLine' style={{backgroundColor: props.data.textColor}}>
 
             </div>
             <div className='currentInfo' style={transportPos}>
-                <div className="currentTime" style={{color: props.data.textColor}}>
+                <div className="currentTime transitionText" style={{color: props.data.textColor}}>
                     {props.data.currentTime == 0 ? "" : pad(props.data.currentTime, 4)}
                 </div> 
-                <div className='currentSong' style={{color: props.data.textColor}}>
-                    {props.data.currentSong?.song}
+                <div className='currentSong transitionText' style={{color: props.data.textColor}}>
+                    {truncate(props.data.currentSong?.song)}
                 </div>
-                <div className='currentArtist' style={{color: props.data.textColor}}>
+                <div className='currentArtist transitionText' style={{color: props.data.textColor}}>
                     {props.data.currentSong?.artist}
                 </div>
             </div>

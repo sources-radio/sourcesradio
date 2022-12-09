@@ -1,7 +1,10 @@
 .mobileTop {
     font-family: "Founders Semibold";
+    position: absolute;
+    top: 0px;
+    left: 0px;
     margin-top: 3%;
-    margin-left: 3%;
+    margin-left: 4%;
     color: #242424;
     font-size: 8vw;
     text-align: left;

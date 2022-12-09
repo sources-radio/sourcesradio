@@ -17,31 +17,11 @@
     background-color: #242424;
 }
 
-.srcs {
-    line-height: 0px;
-    font-size: 16px;
-    color: #F1F1F1;
-    font-family: "Founders Semibold";
-    padding: 0px;
-    background-color: #242424;
-}
-
-.goodinteruption {
-    line-height: 0px;
-    font-size: 14px;
-    color: #F1F1F1;
-    font-family: "ABC Medium";
-    padding: 0px;
-    padding-top: 2px;
-    background-color: #242424;
-}
-
 .bottomrow{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: #242424;
 }
 
 .center {

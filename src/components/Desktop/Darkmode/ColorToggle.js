@@ -18,7 +18,9 @@ export default function ColorToggle(props) {
         outline: 'inherit',
         position: 'absolute',
         right: '30px',
-        top: '24px'
+        top: '24px',
+        transitionProperty: 'background-color',
+        transitionDuration: '0.5'
       }}
       onClick={props.data.toggleColor}
     >

@@ -11,7 +11,7 @@
     padding: 3px;
     color: #242424;
     position: absolute;
-    left: 75px;
+    left: 60px;
     bottom: 52px;
 }
 
@@ -19,18 +19,19 @@
     font-family: "ABC Medium";
     font-size: 20px;
     position: absolute;
-    left: 75px;
+    left: 60px;
     bottom: 29px;
     color: #242424;
 }
 
 .blackLine {
-    background-color: #242424;
     position: absolute;
     width: 3px;
-    height: 47px;
-    left: 180px;
-    bottom: 35px;
+    height: 45px;
+    left: 160px;
+    bottom: 33px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 
 .currentTime{
@@ -45,9 +46,11 @@
 .playPause {
     position: absolute;
     color: #242424;
-    left: 50px;
+    left: 30px;
     bottom: 60px;
     font-size: 20px;
+    transition-property: color;
+    transition-duration: 0.5s;
 }
 
 .currentInfo{

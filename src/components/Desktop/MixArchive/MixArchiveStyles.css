@@ -20,13 +20,17 @@
 .mixArchives{
     text-align: right;
     font-family: "ABC Medium";
-    font-size: 24px;
+    font-size: 1vw;
     background: none;
 	color: inherit;
 	border: none;
 	cursor: pointer;
 	outline: inherit;
     color: #242424;
+}
+
+.mixText{
+    padding-top: 40px;
 }
 
 @font-face {

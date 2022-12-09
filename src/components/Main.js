@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import LandingPage from "../LandingPage/LandingPage";
 import Desktop from "./Desktop/Desktop";
 import Mobile from "./Mobile/Mobile";
+import tween from "color-tween/src/tween";
 
 let player;
 
@@ -37,6 +38,15 @@ export default function Main(){
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);
     const [backgroundColor, setBackgroundColor] = useState(color.white)
+    
+    // var tween = new ColorTween('#000', '#FFF')
+    //           .duration(1000)
+    //           .easing('linear')
+    //           .onUpdate(update)
+    //           .onEnd(function(){
+    //             console.log('nice run');
+    //           })
+    //           .start(animate);
 
     function pauseToggle(){
         setPlayState(!playState);

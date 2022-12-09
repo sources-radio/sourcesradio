@@ -5,7 +5,6 @@
     /* height: 100%; */
     margin: auto;
     background-size: cover;
-    background-color: #000000;
     z-index: -2;
     background-position: center;
     top: 0px;
@@ -14,6 +13,13 @@
     bottom: 0px;
     /* filter: brightness(80%); */
     overflow: hidden;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.transitionText{
+    transition-property: color;
+    transition-duration: 0.5s;
 }
 
 .backgroundImage::after {

@@ -2,7 +2,12 @@
     font-family: "Founders Semibold";
     font-size: 3vw;
     padding: 10px;
-    padding-left: 30px;
+    padding-left: 40px;
+}
+
+.transitionText{
+    transition-property: color;
+    transition-duration: 0.5s;
 }
 
 @font-face {

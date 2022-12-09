@@ -12,6 +12,8 @@ export default function Tracklist(props){
     var index1 = 0;
     var index2 = 0;
 
+    const truncate = (input) => input.length > 20 ? `${input.substring(0, 20)}...` : input;
+
     const tracks1 = props.data.currentSelectedMix.songs.map((song) => {
         if(song.showInTracklist === true)
         {
@@ -19,7 +21,7 @@ export default function Tracklist(props){
             {
                 return (
                     <div key={Math.random()}>
-                        <div className="song" style={{color: props.data.textColor}}>{song.songName}</div>
+                        <div className="song" style={{color: props.data.textColor}}>{truncate(song.songName)}</div>
                         <div className="artist" style={{color: props.data.textColor}}>{song.artist}</div>
                     </div>
                 );
@@ -34,7 +36,7 @@ export default function Tracklist(props){
             {
                 return (
                     <div key={Math.random()}>
-                        <div className="song" style={{color: props.data.textColor}}>{song.songName}</div>
+                        <div className="song" style={{color: props.data.textColor}}>{truncate(song.songName)}</div>
                         <div className="artist" style={{color: props.data.textColor}}>{song.artist}</div>
                     </div>
                 );

@@ -22,7 +22,7 @@ export default function MobileMixArchive(props)
 
     return(
         <div className="mobileMixArchiveContainer">
-            <button className="mobileMixArchiveButton" onClick={OnClick}>ARCHIVE {props.data.mixArchiveOpen ? "↓" : "->"}</button>
+            <button className="mobileMixArchiveButton" onClick={OnClick}>ARCHIVE {props.data.mixArchiveOpen ? "" : ""}</button>
             {props.data.mixArchiveOpen ? mixes : null}
         </div>
     )

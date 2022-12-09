@@ -31,11 +31,11 @@ export default function SelectedMix(props){
     {
         if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
-            return(props.data.playState ? null : <ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay" style={{color: props.data.textColor}}/>)
+            return(props.data.playState ? null : <ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay transitionText" style={{color: props.data.textColor}}/>)
         }
         else
         {
-            return(<ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay" style={{color: props.data.textColor}}/>);
+            return(<ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay transitionText" style={{color: props.data.textColor}}/>);
         }
     }
 
@@ -45,7 +45,7 @@ export default function SelectedMix(props){
                 {getPlayPauseButton()}
             </button>
 
-            <div className="title" style={{color: props.data.textColor}} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <div className="title transitionText" style={{color: props.data.textColor}} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                                 
                 {props.data.currentSelectedMix.title}
             </div>
