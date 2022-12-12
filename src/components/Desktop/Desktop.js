@@ -6,9 +6,15 @@ import TopTitle from "./TopTitle/TopTitle";
 import Tracklist from "./tracklist/Tracklist";
 import './DesktopStyles.css'
 import ColorToggle from "./Darkmode/ColorToggle";
+import useKeypress from "react-use-keypress";
 
 export default function Desktop(props){
     
+    // detect if space key pressed
+    useKeypress([' '], (event) => {
+        props.data.pauseToggle();
+    });
+
     return(
         <div>
             <TopTitle data={props.data}/>
