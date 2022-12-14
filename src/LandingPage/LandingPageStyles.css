@@ -26,12 +26,12 @@
 
 .center {
    position: absolute;
-   top: 45%; 
+   top: 49%; 
    left: 50%;
    transform: translate(-50%, -55%);
    width:300px;
    background-color: #242424;
-    text-align: center;
+   text-align: center;
 }
 
 @keyframes example {
