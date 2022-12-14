@@ -1,0 +1,47 @@
+.title {
+    font-family: "Founders Semibold";
+    font-size: 8vw;
+    text-align: left;
+    line-height: 6vw;
+}
+
+.pauseToggle {
+    font-family: "ABC Medium";
+    font-size: 30px;
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+    color: #242424;
+    padding: 0;
+    padding-top: 0.6vw;
+    margin: 0px;
+}
+
+.selectedPlay {
+    padding: 0px;
+    margin: 0px;
+    font-size: 5vw;
+}
+
+.current {
+    position: absolute;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    padding-left: 30px;
+}
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ABC Medium";
+    src: local("ABCFavoritMonoEdu-Medium."),
+    url("../../../fonts/ABCFavoritMonoEdu-Medium.otf") format("truetype");
+}

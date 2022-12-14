@@ -1,0 +1,14 @@
+.topTitle{
+    font-family: "Founders Semibold";
+    font-size: 3vw;
+    padding: 10px;
+    padding-left: 40px;
+}
+
+
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}

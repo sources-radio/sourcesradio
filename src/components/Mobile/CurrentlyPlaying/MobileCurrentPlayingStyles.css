@@ -1,0 +1,86 @@
+.mobileCurrentPlaying{
+    position: absolute;
+    padding-top: 10vw;
+    bottom: 3%;
+    left: 3%;
+    color: #242424;
+}
+
+.mobilePlayPause{
+    padding-top: .7vw;
+    color: #242424;
+    font-size: 5vw;
+}
+
+.mobileCurrentTime{
+    position: absolute;
+    top: 0px;
+    font-family: "ABC Medium";
+    font-size: 9vw;
+    color: #242424;
+}
+
+.mobileBlackLine{
+    background-color: #242424;
+    width: 0.7vw;
+    height: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 3px;
+    margin-bottom: 5px;
+
+    color: #242424;
+}
+
+.mobileCurrentMix{
+    font-family: "ABC Medium";
+    font-size: 5vw;
+    padding-left: 10px;
+    color: #242424;
+}
+
+.mobileCurrentMixDuration{
+    white-space: pre;
+    font-family: "ABC Medium";
+    font-size: 5vw;
+    padding-left: 10px;
+    display:flex ;
+    color: #242424;
+}
+
+.mobileControl
+{
+    display: flex;
+}
+
+.mobileTime{
+    display: flex;
+    font-size: 8vw;
+    flex-direction: column;
+}
+
+.mobileCurrentSong{
+    font-family: "ABC Medium";
+    font-size: 5vw;
+    color: #242424;
+    position: flex;
+}
+
+.mobileCurrentArtist{
+    font-family: "ABC Medium";
+    font-size: 5vw;
+    color: #242424;
+}
+
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ABC Medium";
+    src: local("ABCFavoritMonoEdu-Medium."),
+    url("../../../fonts/ABCFavoritMonoEdu-Medium.otf") format("truetype");
+}

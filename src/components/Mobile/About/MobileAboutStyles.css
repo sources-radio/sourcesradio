@@ -1,0 +1,46 @@
+.mobileAbout{
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    margin-top: 3%;
+    margin-right: 3%;
+    text-align: right;
+    color: #242424;
+}
+
+.mobileAboutButton{
+    font-family: "ABC Medium";
+    font-size: 6vw;
+    text-align: right;
+    background: none;
+    color: #242424;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.mobileAboutText{
+    text-align: right;
+    font-family: "ABC Medium";
+    font-size: 3.5vw;
+    line-height: 4px;
+    padding-top: 2vh;
+    padding-right: 10px;
+
+    color: #242424;
+    color: #242424;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ABC Medium";
+    src: local("ABCFavoritMonoEdu-Medium."),
+    url("../../../fonts/ABCFavoritMonoEdu-Medium.otf") format("truetype");
+}

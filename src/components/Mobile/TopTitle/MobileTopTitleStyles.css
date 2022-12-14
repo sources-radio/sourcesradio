@@ -1,0 +1,17 @@
+.mobileTop {
+    font-family: "Founders Semibold";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 3%;
+    margin-left: 4%;
+    color: #242424;
+    font-size: 8vw;
+    text-align: left;
+}
+
+@font-face {
+    font-family: "Founders Semibold";
+    src: local("FoundersGroteskCondensed-Semibold.otf"),
+    url("../../../fonts/FoundersGroteskCondensed-Semibold.otf") format("truetype");
+}

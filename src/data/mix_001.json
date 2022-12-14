@@ -1,0 +1,73 @@
+{
+  "title": "MIX_001",
+  "duration": 1592,
+  "songs": [
+    {
+      "songName": "INTRO",
+      "artist": "SOURCES RADIO",
+      "time": 0,
+      "showInTracklist": false
+    },
+    {
+      "songName": "LOUIE BAG (LIVE)",
+      "artist": "YEBBA",
+      "time": 44,
+      "showInTracklist": true
+ 
+    },
+    {
+      "songName": "CHITO’S SONG",
+      "artist": "COCHEMEA",
+      "time": 300,
+      "showInTracklist": true 
+    },
+    {
+      "songName": "LAST WORDS",
+      "artist": "KENNY BEATS",
+      "time": 485,
+      "showInTracklist": true
+    },
+    {
+      "songName": "TENDRYL",
+      "artist": "BESHKEN",
+      "time": 592,
+      "showInTracklist": true
+    },
+    {
+      "songName": "GYONGYGAJU LANY",
+      "artist": "OMEGA",
+      "time": 829,
+      "showInTracklist": true
+    },
+    {
+      "songName": "MORE LOVE LESS HATE",
+      "artist": "LOUIS COLE",
+      "time": 1059,
+      "showInTracklist": true
+    },
+    {
+      "songName": "CAN’T BREATHE",
+      "artist": "9TH WONDER",
+      "time": 1088,
+      "showInTracklist": true
+    },
+    {
+      "songName": "BEAUTY SLEEP",
+      "artist": "AB001",
+      "time": 1207,
+      "showInTracklist": true
+    },
+    {
+      "songName": "SERENADE OF WATER",
+      "artist": "MEN I TRUST",
+      "time": 1361,
+      "showInTracklist": true
+    },
+    {
+      "songName": "OUTRO",
+      "artist": "SOURCES RADIO",
+      "time": 1546,
+      "showInTracklist": false
+    }
+  ]
+}

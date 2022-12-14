@@ -1,0 +1,72 @@
+{
+  "title": "MIX_002",
+  "duration": 1694,
+  "songs": [
+    {
+      "songName": "INTRO",
+      "artist": "SOURCES RADIO",
+      "time": 0,
+      "showInTracklist": false
+    },
+    {
+      "songName": "I DON'T WANNA GO TO SCHOOL",
+      "artist": "DEATON CHRIS ANTHONY",
+      "time": 46,
+      "showInTracklist": true
+    },
+    {
+      "songName": "DIDN'T I",
+      "artist": "LOU VAL",
+      "time": 186,
+      "showInTracklist": true
+    },
+    {
+      "songName": "BAD HABIT",
+      "artist": "STEVE LACY",
+      "time": 290,
+      "showInTracklist": true
+    },
+    {
+      "songName": "A DAY IN THE PARK",
+      "artist": "RYUICHI SAKAMOTO",
+      "time": 520,
+      "showInTracklist": true
+    },
+    {
+      "songName": "PROBLEMS",
+      "artist": "FLOATING POINTS",
+      "time": 718,
+      "showInTracklist": true
+    },
+    {
+      "songName": "MAGAZINE",
+      "artist": "TORO Y MOI",
+      "time": 956,
+      "showInTracklist": true
+    },
+    {
+      "songName": "LOST KIDS GET MONEY",
+      "artist": "BRENT FAIYAZ",
+      "time": 1131,
+      "showInTracklist": true
+    },
+    {
+      "songName": "AURABLU",
+      "artist": "FLWR CHYLD",
+      "time": 1278,
+      "showInTracklist": true
+    },
+    {
+      "songName": "WHAT A DAY",
+      "artist": "IVAN AVE",
+      "time": 1434,
+      "showInTracklist": true
+    },
+    {
+      "songName": "OUTRO",
+      "artist": "SOURCES RADIO",
+      "time": 1643,
+      "showInTracklist": false
+    }
+  ]
+}
