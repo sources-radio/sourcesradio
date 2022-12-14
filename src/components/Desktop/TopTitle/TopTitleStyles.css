@@ -5,10 +5,7 @@
     padding-left: 40px;
 }
 
-.transitionText{
-    transition-property: color;
-    transition-duration: 0.5s;
-}
+
 
 @font-face {
     font-family: "Founders Semibold";

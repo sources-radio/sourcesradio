@@ -10,7 +10,6 @@ import tween from "color-tween/src/tween";
 let player;
 
 const mix001 = require('../data/mix_001.json');
-const mix002 = require('../data/mix_002.json');
 
 const color = {
     white: "#F1F1F1",
@@ -33,7 +32,7 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
-    const mixArray = [mix001, mix002];
+    const mixArray = [mix001];
     const [allMixes, setAllMixes] = useState(mixArray);
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);
