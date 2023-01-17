@@ -10,6 +10,7 @@ import tween from "color-tween/src/tween";
 let player;
 
 const mix001 = require('../data/mix_001.json');
+const mix002 = require('../data/mix_002.json');
 
 const color = {
     white: "#F1F1F1",
@@ -23,8 +24,8 @@ export default function Main(){
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)'})
 
-    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix001);
-    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix001);
+    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix002);
+    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix002);
     const [playState, setPlayState] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [aboutOpen, setAboutOpen] = useState(false);
@@ -32,21 +33,12 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
-    const mixArray = [mix001];
+    const mixArray = [mix002, mix001];
     const [allMixes, setAllMixes] = useState(mixArray);
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);
     const [backgroundColor, setBackgroundColor] = useState(color.white)
     
-    // var tween = new ColorTween('#000', '#FFF')
-    //           .duration(1000)
-    //           .easing('linear')
-    //           .onUpdate(update)
-    //           .onEnd(function(){
-    //             console.log('nice run');
-    //           })
-    //           .start(animate);
-
     function pauseToggle(){
         setPlayState(!playState);
         console.log(`play state ${playState}`)
