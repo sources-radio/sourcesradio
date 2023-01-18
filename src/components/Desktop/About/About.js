@@ -4,7 +4,7 @@ export default function About(props){
 
     var aboutString = (
         <div className='aboutText transitionText' style={{color: props.data.textColor}}>
-            <p>SRCSRADIO[at]GMAIL.COM</p>
+            <p>(C)SRCSRADIO@GMAIL.COM</p>
             <p>(IG)@SOURCESRADIO</p>
             <p>LOS ANGELES, CA</p>
         </div>

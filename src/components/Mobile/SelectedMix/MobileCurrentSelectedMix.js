@@ -3,20 +3,43 @@ import { ImPause2, ImPlay3 } from 'react-icons/im'
 
 export default function MobileCurrentSelectedMix(props){
 
-    function setNewMix(){
-        if(props.data.currentSelectedMix.title === props.data.currentPlayingMix.title)
+    function handleClick(){
+
+        console.log("handle click");
+        if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
-            props.data.pauseToggle();
+
+            console.log("handle click: app state " + props.data.appState);
+            if(props.data.appState == "pause" || props.data.appState == "startup")
+                props.data.setAppState("playing");
+
+            return;
         }
-        else
-        {
-            props.data.setCurrentPlayingMix(props.data.currentSelectedMix)
+
+        props.data.setAppState("switching");
+        props.data.setCurrentPlayingMix(props.data.currentSelectedMix);
+
+        setTimeout(() => {
+            props.data.setAppState("playing");
+        }, 100);
+
+
+
+
+
+        // if(props.data.currentSelectedMix.title === props.data.currentPlayingMix.title)
+        // {
+        //     props.data.pauseToggle();
+        // }
+        // else
+        // {
+        //     props.data.setCurrentPlayingMix(props.data.currentSelectedMix)
             
-            setTimeout(() => {
-                if(!props.data.playState)
-                    props.data.pauseToggle();
-            }, 100);
-        }
+        //     setTimeout(() => {
+        //         if(!props.data.playState)
+        //             props.data.pauseToggle();
+        //     }, 100);
+        // }
     }
 
     function getPlayPauseButton()
@@ -34,10 +57,10 @@ export default function MobileCurrentSelectedMix(props){
     return(
         <div>
             <div className='mobileSelectedMixContainer'>
-               <button className='mobilePlayButton' onClick={setNewMix}>
+               <button className='mobilePlayButton' onClick={handleClick}>
                         {getPlayPauseButton()}
                     </button> 
-                <div className='mobileSelectedMix' onClick={setNewMix}>{props.data.currentSelectedMix.title}</div>
+                <div className='mobileSelectedMix' onClick={handleClick}>{props.data.currentSelectedMix.title}</div>
                 
             </div>
         </div>
