@@ -2,17 +2,13 @@ import "./TracklistStyles.css"
 
 export default function Tracklist(props){
 
-
-    // if(!props.data.showTracklistOnDesktop)
-        // return;
-
     var count = props.data.currentPlayingMix.songs.length;
     var halfCount = count / 2;
     halfCount = Math.round(halfCount--);
     var index1 = 0;
     var index2 = 0;
 
-    const truncate = (input) => input.length > 20 ? `${input.substring(0, 20)}...` : input;
+    const truncate = (input) => input.length > 29 ? `${input.substring(0, 29)}...` : input;
 
     const tracks1 = props.data.currentSelectedMix.songs.map((song) => {
         if(song.showInTracklist === true)
@@ -32,7 +28,7 @@ export default function Tracklist(props){
     const tracks2 = props.data.currentSelectedMix.songs.map((song) => {
         if(song.showInTracklist === true)
         {
-            if(index2++ > 4)
+            if(index2++ >= 4)
             {
                 return (
                     <div key={Math.random()}>

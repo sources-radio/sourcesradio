@@ -21,33 +21,32 @@
 
 .container1 {
     height: 50%;
-    padding-right: 4vw;
+    padding-right: 6vw;
+    width: 18vw;
 }
 
 .container2 {
     height: 50%;
-    padding-right: 14vw;
+    padding-right: 10vw;
+    width: 18vw;
 }
 
 .song{
     font-family: "ABC Medium";
-    font-size: 1.8vw;
+    font-size: 1.3vw;
     margin: 0px;
     padding: 0;
-    line-height: 20px;
-    padding-bottom: 5px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 1.3vw;
     color: #242424;
 }
 
 .artist{
     color: #242424;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     padding: 0;
     font-family: "ABC Medium";
     color: #242424;
-    padding-bottom: 10px;
+    padding-bottom: 1vw;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
