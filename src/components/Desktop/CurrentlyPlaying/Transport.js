@@ -18,7 +18,7 @@ export default function Transport(props){
         color: props.data.textColor
     }
     
-    var button = props.data.playState ? <ImPause2 onClick={() => props.data.pauseToggle()}  className="playPause" style={{color: props.data.textColor}}/> : <ImPlay3 onClick={() => props.data.pauseToggle()} className="playPause" style={{color: props.data.textColor}}/>
+    var button = props.data.playState ? <ImPause2 onClick={() => {props.data.pauseToggle(); props.data.setAppState("pause")}}  className="playPause" style={{color: props.data.textColor}}/> : <ImPlay3 onClick={() => {props.data.pauseToggle(); props.data.setAppState("playing")}} className="playPause" style={{color: props.data.textColor}}/>
     return(
         <div className="transport">
             {button}

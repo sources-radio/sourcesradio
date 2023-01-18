@@ -39,13 +39,12 @@ export default function Main(){
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);
     const [backgroundColor, setBackgroundColor] = useState(color.white)
-    const [appData, setAppData] = useState();
 
+    const [appState, setAppState] = useState("paused");
     
     function pauseToggle(){
-        console.log(`before set play state ${playState}`)
+        console.log(`set play state ${!playState}`)
         setPlayState(!playState);
-        console.log(`play state ${playState}`)
     }
 
     function processCurrentSong(){
@@ -104,14 +103,18 @@ export default function Main(){
     function timerUpdate(){
     }
 
-    var data = {};
     const site = (desktop) =>{
 
+        var data = {};
+
+        data.appState = appState;
+        data.setAppState = setAppState;
         data.currentPlayingMix = currentPlayingMix;
         data.setCurrentPlayingMix = setCurrentPlayingMix;
         data.currentSelectedMix = currentSelectedMix;
         data.setCurrentSelectedMix = setCurrentSelectedMix;
         data.playState = playState;
+        data.setPlayState = setPlayState;
         data.currentTime = currentTime;
         data.aboutOpen = aboutOpen;
         data.setAboutOpen = setAboutOpen;
@@ -128,6 +131,7 @@ export default function Main(){
         data.textColor = textColor;
         data.backgroundColor = backgroundColor;
         data.toggleColor = toggleColor;
+        data.Play = Play;
 
         // setAppData(data);
 
@@ -144,7 +148,8 @@ export default function Main(){
         }
     }
 
-    function OnPlay(){
+    const  Play = () => {
+
         console.log("On Play");
     }
 
@@ -164,7 +169,7 @@ export default function Main(){
             <AudioPlayerProvider>
                 <LandingPage />
                 {site(isDesktop)}
-                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState}  />;
+                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState} audioPlay={Play} appState={appState} />;
             </AudioPlayerProvider>
     )
 }

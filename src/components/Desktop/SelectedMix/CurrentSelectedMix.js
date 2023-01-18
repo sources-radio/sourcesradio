@@ -12,33 +12,35 @@ export default function SelectedMix(props){
     };
 
     function setNewMix(){
-        if(props.data.currentSelectedMix.title === props.data.currentPlayingMix.title)
-        {
-            props.data.pauseToggle();
-        }
-        else
-        {
-            props.data.setCurrentPlayingMix(props.data.currentSelectedMix)
-            setTimeout(() => {
-                if(!props.data.playState)
-                    props.data.pauseToggle();
-            }, 100);
-        }
+        props.data.setAppState("switching");
+        props.data.setCurrentPlayingMix(props.data.currentSelectedMix);
+
+        setTimeout(() => {
+            props.data.setAppState("playing");
+        }, 100);
     }
 
     function getPlayPauseButton()
     {
-        if(props.data.playState)
+        // if(props.data.playState)
+        // {
+        //     return null;
+        // }
+        if(props.data.currentPlayingMix.title !== props.data.currentSelectedMix.title )
         {
-            return null;
+            return(<ImPlay3  className="selectedPlay transitionText" style={{color: props.data.textColor}}/>);
+        } else {
+            return (null);
         }
+
+
         if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
-            return(props.data.playState ? null : <ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay transitionText" style={{color: props.data.textColor}}/>)
+            return(props.data.playState ? null : <ImPlay3   className="selectedPlay transitionText" style={{color: props.data.textColor}}/>)
         }
         else
         {
-            return(<ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay transitionText" style={{color: props.data.textColor}}/>);
+            return(<ImPlay3  className="selectedPlay transitionText" style={{color: props.data.textColor}}/>);
         }
     }
 
