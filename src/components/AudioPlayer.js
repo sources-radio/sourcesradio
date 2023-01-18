@@ -7,6 +7,7 @@ const AudioPlayer = ({ file, playState, audioPlay, appState, setPlayState, setCu
     format: 'mp3',
     autoplay: false,
     html5: true,
+    loop: false
   });
 
   const { percentComplete, duration } = useAudioPosition({ highRefreshRate: true })
