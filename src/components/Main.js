@@ -40,7 +40,7 @@ export default function Main(){
     const [textColor, setTextColor] = useState(color.black);
     const [backgroundColor, setBackgroundColor] = useState(color.white)
 
-    const [appState, setAppState] = useState("pause");
+    const [appState, setAppState] = useState("startup");
     
     function pauseToggle(){
         console.log(`set play state ${!playState}`)
@@ -169,7 +169,7 @@ export default function Main(){
             <AudioPlayerProvider>
                 <LandingPage />
                 {site(isDesktop)}
-                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState} audioPlay={Play} appState={appState} setPlayState={setPlayState} />;
+                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState} audioPlay={Play} appState={appState} setPlayState={setPlayState} setCurrentTime={setCurrentTime}/>;
             </AudioPlayerProvider>
     )
 }

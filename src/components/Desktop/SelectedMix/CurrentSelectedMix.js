@@ -17,7 +17,7 @@ export default function SelectedMix(props){
         {
 
             console.log("handle click: app state " + props.data.appState);
-            if(props.data.appState == "pause")
+            if(props.data.appState == "pause" || props.data.appState == "startup")
                 props.data.setAppState("playing");
 
             return;

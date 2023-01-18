@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAudioPlayer, AudioPlayerProvider, useAudioPosition  } from 'react-use-audio-player';
 
-const AudioPlayer = ({ file, playState, audioPlay, appState, setPlayState }) => {
+const AudioPlayer = ({ file, playState, audioPlay, appState, setPlayState, setCurrentTime }) => {
   const { togglePlayPause, ready, loading, playing, error, play } = useAudioPlayer({
     src: file,
     format: 'mp3',
@@ -15,14 +15,18 @@ const AudioPlayer = ({ file, playState, audioPlay, appState, setPlayState }) => 
 
   useEffect(() =>{
     setTime(time+1);
+    setCurrentTime((percentComplete * duration * 0.01).toFixed(0));
   },[percentComplete])
 
-
-    // if(playState != playing)
-      // togglePlayPause();
-  // },[playState])
+  useEffect(() => {
+    if(loading && appState !== "startup")
+    {
+      setCurrentTime("loading")
+    }
+  },[loading])
 
   useEffect(() => {
+    console.log("app state: " + appState);
     if(appState == "pause")
     {
       console.log("setting pause");
@@ -63,21 +67,8 @@ const AudioPlayer = ({ file, playState, audioPlay, appState, setPlayState }) => 
 
     }, [error])
 
-//   if(error) return <div>{error.message}</div>
-  if (!ready && !loading) return <div>No audio to play</div>;
-//   if (loading) return <div>Loading audio</div>;
-
-//   const goToPosition = React.useCallback((percentage) => {
-//         seek(duration * percentage)
-//     }, [duration, seek])
-
-
   return (
     <AudioPlayerProvider>
-      <div>
-        <button onClick={togglePlayPause}>{playing ? 'Pause' : 'Play'}</button>
-        completed{percentComplete} 
-      </div>
     </AudioPlayerProvider>
   );
 };
