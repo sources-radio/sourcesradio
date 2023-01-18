@@ -19,7 +19,6 @@ export default function SelectedMix(props){
         else
         {
             props.data.setCurrentPlayingMix(props.data.currentSelectedMix)
-            
             setTimeout(() => {
                 if(!props.data.playState)
                     props.data.pauseToggle();
@@ -29,6 +28,10 @@ export default function SelectedMix(props){
 
     function getPlayPauseButton()
     {
+        if(props.data.playState)
+        {
+            return null;
+        }
         if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
             return(props.data.playState ? null : <ImPlay3  onClick={() => props.data.pauseToggle()} className="selectedPlay transitionText" style={{color: props.data.textColor}}/>)
@@ -44,9 +47,7 @@ export default function SelectedMix(props){
             <button onClick={setNewMix} className="pauseToggle" style={{color: props.data.textColor}}>
                 {getPlayPauseButton()}
             </button>
-
             <div className="title transitionText" style={{color: props.data.textColor}} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-                                
                 {props.data.currentSelectedMix.title}
             </div>
        </div>

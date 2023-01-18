@@ -1,22 +1,23 @@
 import { useState } from "react"
 import { useEffect } from "react";
-import ReactHowler from "react-howler";
 import { useMediaQuery } from "react-responsive";
 import LandingPage from "../LandingPage/LandingPage";
+import AudioPlayer from "./AudioPlayer";
 import Desktop from "./Desktop/Desktop";
 import Mobile from "./Mobile/Mobile";
-import tween from "color-tween/src/tween";
+import { AudioPlayerProvider } from "react-use-audio-player";
+
 
 let player;
 
 const mix001 = require('../data/mix_001.json');
 const mix002 = require('../data/mix_002.json');
 
-const color = {
+const color = 
+{
     white: "#F1F1F1",
     black: "#242424"
 }
-
 
 export default function Main(){
     const isDesktop = useMediaQuery({ query: '(min-width: 700px)' })
@@ -38,8 +39,11 @@ export default function Main(){
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);
     const [backgroundColor, setBackgroundColor] = useState(color.white)
+    const [appData, setAppData] = useState();
+
     
     function pauseToggle(){
+        console.log(`before set play state ${playState}`)
         setPlayState(!playState);
         console.log(`play state ${playState}`)
     }
@@ -64,7 +68,7 @@ export default function Main(){
         const interval = setInterval(() => 
         {
             timerUpdate()
-            setCurrentTime(player.seek().toFixed(0));
+            // setCurrentTime(player.seek().toFixed(0));
         }, 500);
         return () => {
             clearInterval(interval)
@@ -74,6 +78,10 @@ export default function Main(){
     useEffect(()=>{
         processCurrentSong();
     }, [currentTime])
+
+    useEffect(() =>{
+         
+    },[])
 
     var OnEnd = () => {
         console.log("on end");
@@ -96,9 +104,9 @@ export default function Main(){
     function timerUpdate(){
     }
 
+    var data = {};
     const site = (desktop) =>{
 
-        var data = {};
         data.currentPlayingMix = currentPlayingMix;
         data.setCurrentPlayingMix = setCurrentPlayingMix;
         data.currentSelectedMix = currentSelectedMix;
@@ -120,6 +128,8 @@ export default function Main(){
         data.textColor = textColor;
         data.backgroundColor = backgroundColor;
         data.toggleColor = toggleColor;
+
+        // setAppData(data);
 
         if(desktop === true)
         {
@@ -151,22 +161,10 @@ export default function Main(){
     }
 
     return (
-        <div>
-            <LandingPage />
-            {site(isDesktop)}
-            
-            <ReactHowler 
-                playing={playState} 
-                html5={true} 
-                src={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`}
-                ref={(ref) => {player = ref;}}
-                loop={true}
-                onPlay={OnPlay}
-                onLoad={OnLoaded}
-                onLoadError={OnLoadError}
-                onError={OnError}
-                onEnd={pauseToggle}
-            />
-        </div>
+            <AudioPlayerProvider>
+                <LandingPage />
+                {site(isDesktop)}
+                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState}  />;
+            </AudioPlayerProvider>
     )
 }
