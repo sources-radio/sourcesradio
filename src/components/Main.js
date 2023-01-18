@@ -158,7 +158,7 @@ export default function Main(){
     }
 
     function OnError(mgs){
-        console.log(`error: ${mgs}`)
+        console.log(`error:  ${mgs}`)
     }
 
     function OnLoadError(mgs){
