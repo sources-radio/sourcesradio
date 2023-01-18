@@ -169,7 +169,7 @@ export default function Main(){
             <AudioPlayerProvider>
                 <LandingPage />
                 {site(isDesktop)}
-                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState} audioPlay={Play} appState={appState} setPlayState={setPlayState} setCurrentTime={setCurrentTime}/>;
+                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState} audioPlay={Play} appState={appState} setPlayState={setPlayState} setCurrentTime={setCurrentTime}/>
             </AudioPlayerProvider>
     )
 }
