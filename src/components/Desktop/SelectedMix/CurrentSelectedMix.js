@@ -11,7 +11,18 @@ export default function SelectedMix(props){
         props.data.setIsTracklistOpen(false);
     };
 
-    function setNewMix(){
+    function handleClick(){
+        console.log("handle click");
+        if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
+        {
+
+            console.log("handle click: app state " + props.data.appState);
+            if(props.data.appState == "pause")
+                props.data.setAppState("playing");
+
+            return;
+        }
+
         props.data.setAppState("switching");
         props.data.setCurrentPlayingMix(props.data.currentSelectedMix);
 
@@ -22,17 +33,11 @@ export default function SelectedMix(props){
 
     function getPlayPauseButton()
     {
-        // if(props.data.playState)
-        // {
-        //     return null;
-        // }
+        
         if(props.data.currentPlayingMix.title !== props.data.currentSelectedMix.title )
         {
             return(<ImPlay3  className="selectedPlay transitionText" style={{color: props.data.textColor}}/>);
-        } else {
-            return (null);
-        }
-
+        } 
 
         if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
@@ -46,7 +51,7 @@ export default function SelectedMix(props){
 
     return(
         <div className="current">
-            <button onClick={setNewMix} className="pauseToggle" style={{color: props.data.textColor}}>
+            <button onClick={handleClick} className="pauseToggle" style={{color: props.data.textColor}}>
                 {getPlayPauseButton()}
             </button>
             <div className="title transitionText" style={{color: props.data.textColor}} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
@@ -54,4 +59,4 @@ export default function SelectedMix(props){
             </div>
        </div>
    )
-}
+} 
