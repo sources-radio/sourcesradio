@@ -4,8 +4,8 @@ export default function MobileAbout(props){
 
     var aboutString = (
         <div className='mobileAboutText'>
-            <p>(C)SRCSRADIO</p>
-            <p>(IG)@ SOURCESRADIO</p>
+            <p>(C)SRCSRADIO@GMAIL.COM</p>
+            <p>(IG)@SOURCESRADIO</p>
             <p>LOS ANGELES, CA</p>
         </div>
     );

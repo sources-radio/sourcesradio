@@ -1,21 +1,23 @@
 import { useState } from "react"
 import { useEffect } from "react";
-import ReactHowler from "react-howler";
 import { useMediaQuery } from "react-responsive";
 import LandingPage from "../LandingPage/LandingPage";
+import AudioPlayer from "./AudioPlayer";
 import Desktop from "./Desktop/Desktop";
 import Mobile from "./Mobile/Mobile";
-import tween from "color-tween/src/tween";
+import { AudioPlayerProvider } from "react-use-audio-player";
+
 
 let player;
 
 const mix001 = require('../data/mix_001.json');
+const mix002 = require('../data/mix_002.json');
 
-const color = {
+const color = 
+{
     white: "#F1F1F1",
     black: "#242424"
 }
-
 
 export default function Main(){
     const isDesktop = useMediaQuery({ query: '(min-width: 700px)' })
@@ -23,8 +25,8 @@ export default function Main(){
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)'})
 
-    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix001);
-    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix001);
+    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix002);
+    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix002);
     const [playState, setPlayState] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [aboutOpen, setAboutOpen] = useState(false);
@@ -32,24 +34,17 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
-    const mixArray = [mix001];
+    const mixArray = [mix002, mix001];
     const [allMixes, setAllMixes] = useState(mixArray);
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);
     const [backgroundColor, setBackgroundColor] = useState(color.white)
-    
-    // var tween = new ColorTween('#000', '#FFF')
-    //           .duration(1000)
-    //           .easing('linear')
-    //           .onUpdate(update)
-    //           .onEnd(function(){
-    //             console.log('nice run');
-    //           })
-    //           .start(animate);
 
+    const [appState, setAppState] = useState("startup");
+    
     function pauseToggle(){
+        console.log(`set play state ${!playState}`)
         setPlayState(!playState);
-        console.log(`play state ${playState}`)
     }
 
     function processCurrentSong(){
@@ -72,7 +67,7 @@ export default function Main(){
         const interval = setInterval(() => 
         {
             timerUpdate()
-            setCurrentTime(player.seek().toFixed(0));
+            // setCurrentTime(player.seek().toFixed(0));
         }, 500);
         return () => {
             clearInterval(interval)
@@ -82,6 +77,10 @@ export default function Main(){
     useEffect(()=>{
         processCurrentSong();
     }, [currentTime])
+
+    useEffect(() =>{
+         
+    },[])
 
     var OnEnd = () => {
         console.log("on end");
@@ -107,11 +106,15 @@ export default function Main(){
     const site = (desktop) =>{
 
         var data = {};
+
+        data.appState = appState;
+        data.setAppState = setAppState;
         data.currentPlayingMix = currentPlayingMix;
         data.setCurrentPlayingMix = setCurrentPlayingMix;
         data.currentSelectedMix = currentSelectedMix;
         data.setCurrentSelectedMix = setCurrentSelectedMix;
         data.playState = playState;
+        data.setPlayState = setPlayState;
         data.currentTime = currentTime;
         data.aboutOpen = aboutOpen;
         data.setAboutOpen = setAboutOpen;
@@ -128,6 +131,9 @@ export default function Main(){
         data.textColor = textColor;
         data.backgroundColor = backgroundColor;
         data.toggleColor = toggleColor;
+        data.Play = Play;
+
+        // setAppData(data);
 
         if(desktop === true)
         {
@@ -142,7 +148,8 @@ export default function Main(){
         }
     }
 
-    function OnPlay(){
+    const  Play = () => {
+
         console.log("On Play");
     }
 
@@ -151,30 +158,19 @@ export default function Main(){
     }
 
     function OnError(mgs){
-        console.log(`error: ${mgs}`)
+        console.log(`error:  ${mgs}`)
     }
 
     function OnLoadError(mgs){
+
         console.log(`load errpr: ${mgs} \n at path /audio-files/%{currentPlayingMix.title.toLowerCase()}.mp3`);
     }
 
     return (
-        <div>
-            <LandingPage />
-            {site(isDesktop)}
-            
-            <ReactHowler 
-                playing={playState} 
-                html5={true} 
-                src={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`}
-                ref={(ref) => {player = ref;}}
-                loop={true}
-                onPlay={OnPlay}
-                onLoad={OnLoaded}
-                onLoadError={OnLoadError}
-                onError={OnError}
-                onEnd={pauseToggle}
-            />
-        </div>
+            <AudioPlayerProvider>
+                <LandingPage />
+                {site(isDesktop)}
+                <AudioPlayer file={`/audio-files/${currentPlayingMix.title.toLowerCase()}.mp3`} playState={playState} audioPlay={Play} appState={appState} setPlayState={setPlayState} setCurrentTime={setCurrentTime}/>
+            </AudioPlayerProvider>
     )
 }
