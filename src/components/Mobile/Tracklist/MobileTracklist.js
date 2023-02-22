@@ -20,8 +20,8 @@ export default function MobileTracklist(props){
             {
                 return (
                     <div key={Math.random()}>
-                        <div className="mobileSong">{(song.songName)}</div>
-                        <div className="mobileArtist">{song.artist}</div>
+                        <div className="mobileSong">{trunncate(song.songName.toUpperCase())}</div>
+                        <div className="mobileArtist">{truncate(song.artist.toUpperCase())}</div>
                     </div>
                 );
             }
