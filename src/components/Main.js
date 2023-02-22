@@ -7,11 +7,9 @@ import Desktop from "./Desktop/Desktop";
 import Mobile from "./Mobile/Mobile";
 import { AudioPlayerProvider } from "react-use-audio-player";
 
-
-let player;
-
 const mix001 = require('../data/mix_001.json');
 const mix002 = require('../data/mix_002.json');
+const mix003 = require('../data/mix_003.json');
 
 const color = 
 {
@@ -25,8 +23,8 @@ export default function Main(){
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)'})
 
-    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix002);
-    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix002);
+    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix003);
+    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix003);
     const [playState, setPlayState] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [aboutOpen, setAboutOpen] = useState(false);
@@ -34,7 +32,7 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
-    const mixArray = [mix002, mix001];
+    const mixArray = [mix003, mix002, mix001];
     const [allMixes, setAllMixes] = useState(mixArray);
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);

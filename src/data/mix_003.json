@@ -1,0 +1,66 @@
+{
+"title": "MIX_003",
+"duration": 1601,
+"songs": [
+{
+"songName": "INTRO",
+"artist": "SOURCES RADIO",
+"time": 0,
+"showInTracklist": false
+},
+{
+"songName": "You Fooled Around",
+"artist": "Sister Sledge",
+"time": 28,
+"showInTracklist": true
+},
+{
+"songName": "Bread Winner",
+"artist": "Floyd Fuji, Topaz Jones",
+"time": 237,
+"showInTracklist": true
+},
+{
+"songName": "Sweet Life / It’s Alright",
+"artist": "Frank Ocean / Moods",
+"time": 396,
+"showInTracklist": true
+},
+{
+"songName": "We Do It (Jazz Spastiks Remix)",
+"artist": "Slum Village",
+"time": 525,
+"showInTracklist": true
+},
+{
+"songName": "Free",
+"artist": "Deniece Williams",
+"time": 710,
+"showInTracklist": true
+},
+{
+"songName": "Herring Bone",
+"artist": "Topaz Jones",
+"time": 862,
+"showInTracklist": true
+},
+{
+"songName": "Vile Mentality",
+"artist": "J Cole",
+"time": 1016,
+"showInTracklist": true
+},
+{
+"songName": "Collage",
+"artist": "Three Degrees",
+"time": 1187,
+"showInTracklist": true
+},
+{
+"songName": "No More Tears",
+"artist": "Teedra Moses",
+"time": 1356,
+"showInTracklist": true
+}
+]
+}

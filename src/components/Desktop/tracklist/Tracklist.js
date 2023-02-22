@@ -17,8 +17,8 @@ export default function Tracklist(props){
             {
                 return (
                     <div key={Math.random()}>
-                        <div className="song" style={{color: props.data.textColor}}>{truncate(song.songName)}</div>
-                        <div className="artist" style={{color: props.data.textColor}}>{song.artist}</div>
+                        <div className="song" style={{color: props.data.textColor}}>{truncate(song.songName.toUpperCase())}</div>
+                        <div className="artist" style={{color: props.data.textColor}}>{song.artist.toUpperCase()}</div>
                     </div>
                 );
             } 
@@ -32,8 +32,8 @@ export default function Tracklist(props){
             {
                 return (
                     <div key={Math.random()}>
-                        <div className="song" style={{color: props.data.textColor}}>{truncate(song.songName)}</div>
-                        <div className="artist" style={{color: props.data.textColor}}>{song.artist}</div>
+                        <div className="song" style={{color: props.data.textColor}}>{truncate(song.songName.toUpperCase())}</div>
+                        <div className="artist" style={{color: props.data.textColor}}>{song.artist.toUpperCase()}</div>
                     </div>
                 );
             }
