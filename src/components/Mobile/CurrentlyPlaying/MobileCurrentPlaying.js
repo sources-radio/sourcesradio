@@ -5,6 +5,8 @@ export default function MobileCurrentPlaying(props){
 
     var button = props.data.playState ? <ImPause2 onClick={() => {props.data.pauseToggle(); props.data.setAppState("pause")}}   className="mobilePlayPause"/> : <ImPlay3 onClick={() => {props.data.pauseToggle(); props.data.setAppState("playing")}} className="mobilePlayPause"/>
     
+    const truncate = (input) => input.length > 19 ? `${input.substring(0, 16)}...` : input;
+
     function pad(num, size) {
         num = num.toString();
         while (num.length < size) num = "0" + num;
@@ -30,10 +32,10 @@ export default function MobileCurrentPlaying(props){
                         {props.data.currentTime > 0 ? pad(props.data.currentTime, 4) : ""}
                     </div>        
                     <div className='mobileCurrentSong'>
-                        {props.data.currentSong?.song}
+                        {truncate(props.data.currentSong?.song)}
                     </div>
                     <div className='mobileCurrentArtist'>
-                        {props.data.currentSong?.artist}
+                        {truncate(props.data.currentSong?.artist)}
                     </div>
     
                 </div>

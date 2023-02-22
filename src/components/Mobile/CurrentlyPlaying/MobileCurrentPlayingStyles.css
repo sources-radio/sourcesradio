@@ -1,8 +1,9 @@
 .mobileCurrentPlaying{
     position: absolute;
     padding-top: 10vw;
-    bottom: 3%;
+    bottom: 1%;
     left: 3%;
+    right: 3%;
     color: #242424;
 }
 
@@ -54,7 +55,6 @@
 }
 
 .mobileTime{
-    display: flex;
     font-size: 8vw;
     flex-direction: column;
 }
@@ -63,15 +63,26 @@
     font-family: "ABC Medium";
     font-size: 5vw;
     color: #242424;
-    position: flex;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+    min-width: 1px;
+
 }
 
 .mobileCurrentArtist{
     font-family: "ABC Medium";
     font-size: 5vw;
     color: #242424;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+    min-width: 1px;
 }
-
 
 @font-face {
     font-family: "Founders Semibold";
