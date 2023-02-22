@@ -32,10 +32,10 @@ export default function MobileCurrentPlaying(props){
                         {props.data.currentTime > 0 ? pad(props.data.currentTime, 4) : ""}
                     </div>        
                     <div className='mobileCurrentSong'>
-                        {truncate(props.data.currentSong?.song)}
+                        {truncate(props.data.currentSong?.song.toUpperCase())}
                     </div>
                     <div className='mobileCurrentArtist'>
-                        {truncate(props.data.currentSong?.artist)}
+                        {truncate(props.data.currentSong?.artist.toUpperCase())}
                     </div>
     
                 </div>
