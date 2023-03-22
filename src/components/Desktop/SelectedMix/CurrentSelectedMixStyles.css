@@ -3,6 +3,7 @@
     font-size: 8vw;
     text-align: left;
     line-height: 6vw;
+    cursor: default;
 }
 
 .pauseToggle {

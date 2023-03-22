@@ -13,6 +13,7 @@
     position: absolute;
     left: 60px;
     bottom: 52px;
+    cursor: default;
 }
 
 .currentDuration{
@@ -22,6 +23,7 @@
     left: 60px;
     bottom: 29px;
     color: #242424;
+    cursor: default;
 }
 
 .blackLine {
@@ -41,6 +43,7 @@
     padding: 0px;
     position: absolute;
     top: -50px;
+    cursor: default;
 }
 
 .playPause {
@@ -51,6 +54,7 @@
     font-size: 20px;
     transition-property: color;
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 .currentInfo{
@@ -70,6 +74,7 @@
     position: absolute;
     left: 0px;
     top: 0px;
+    cursor: default;
 }
 
 .currentArtist{
@@ -82,6 +87,7 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
+    cursor: default;
 }
 
 @font-face {

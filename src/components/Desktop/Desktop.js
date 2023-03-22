@@ -12,6 +12,7 @@ export default function Desktop(props){
     
     // detect if space key pressed
     useKeypress([' '], (event) => {
+        document.activeElement.blur();
         props.data.pauseToggle();
         console.log("space pressed");
 
