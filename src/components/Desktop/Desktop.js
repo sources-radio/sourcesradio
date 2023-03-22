@@ -13,6 +13,16 @@ export default function Desktop(props){
     // detect if space key pressed
     useKeypress([' '], (event) => {
         props.data.pauseToggle();
+        console.log("space pressed");
+
+        if(props.data.appState == "playing")
+        {
+            props.data.setAppState("pause");
+        }
+        else 
+        {
+            props.data.setAppState("playing");
+        }
     });
 
     return(
