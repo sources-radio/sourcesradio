@@ -29,14 +29,12 @@
   height: 100%;
   /* backdrop-filter: blur(10px); */
   pointer-events: none; /* make the overlay click-through */
-  animation-name: desktop;
-  animation-duration: 4.0s;
-
+  /* animation-name: desktop; */
 }
 
-@keyframes desktop {
+/* @keyframes desktop {
   0% {backdrop-filter: blur(10px) } 
   50% {backdrop-filter: blur(10px) } 
   80% {backdrop-filter: blur(0px) }
-}
+} */
 

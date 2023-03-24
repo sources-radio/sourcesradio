@@ -1,0 +1,54 @@
+{
+    "title": "MIX_004",
+    "duration": 1164,
+    "songs": [
+        {
+            "songName": "INTRO",
+            "artist": "SOURCES RADIO",
+            "time": 0,
+            "showInTracklist": false
+        },
+        {
+            "songName": "Unknown Mortal Orchestra",
+            "artist": "Meshuggah",
+            "time": 36,
+            "showInTracklist": true
+        },
+        {
+            "songName": "Vegyn",
+            "artist": "Mushroom Abolitionist",
+            "time": 248,
+            "showInTracklist": true
+        },
+        {
+            "songName": "Orion Sun",
+            "artist": "intro",
+            "time": 503,
+            "showInTracklist": true
+        },
+        {
+            "songName": "Tori’s Ballad",
+            "artist": "Kendrick Lamar/Marigold",
+            "time": 650,
+            "showInTracklist": true
+        },
+        {
+            "songName": "Bay Ledges",
+            "artist": "Between",
+            "time": 804,
+            "showInTracklist": true
+        },
+        {
+            "songName": "easy life, Arlo Parks",
+            "artist": "sangria",
+            "time": 874,
+            "showInTracklist": true
+        },
+        {
+            "songName": "Chenayder",
+            "artist": "My My",
+            "time": 1061,
+            "showInTracklist": true
+        }
+    ]
+}

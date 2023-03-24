@@ -14,7 +14,7 @@
     align-items: center;
     text-align: center;
     margin: auto;
-    background-color: #242424;
+    background-color: #1b1b1b;
 }
 
 .bottomrow{
@@ -30,7 +30,7 @@
    left: 50%;
    transform: translate(-50%, -55%);
    width:300px;
-   background-color: #242424;
+   background-color: #1b1b1b;
    text-align: center;
 }
 
@@ -47,7 +47,8 @@
     padding: 0px;
     margin: 0px;
     top: 0px;
-    background-color: #242424;
+    background-color: #1b1b1b;
+    mix-blend-mode: normal;
     position: absolute;
     color: #f1f1f1;
     opacity: 0%;

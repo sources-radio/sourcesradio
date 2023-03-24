@@ -15,7 +15,6 @@ export default function SelectedMix(props){
         console.log("handle click");
         if(props.data.currentPlayingMix.title === props.data.currentSelectedMix.title)
         {
-
             console.log("handle click: app state " + props.data.appState);
             if(props.data.appState == "pause" || props.data.appState == "startup")
                 props.data.setAppState("playing");

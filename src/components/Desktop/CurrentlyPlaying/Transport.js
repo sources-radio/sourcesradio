@@ -36,10 +36,10 @@ export default function Transport(props){
                     {props.data.currentTime == 0 ? "" : pad(props.data.currentTime, 4)}
                 </div> 
                 <div className='currentSong transitionText' style={{color: props.data.textColor}}>
-                    {truncate(props.data.currentSong?.song)}
+                    {truncate(props.data.currentSong?.song.toUpperCase())}
                 </div>
                 <div className='currentArtist transitionText' style={{color: props.data.textColor}}>
-                    {props.data.currentSong?.artist}
+                    {props.data.currentSong?.artist.toUpperCase()}
                 </div>
             </div>
        </div>
