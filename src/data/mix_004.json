@@ -1,54 +1,54 @@
 {
-    "title": "MIX_004",
-    "duration": 1164,
-    "songs": [
-        {
-            "songName": "INTRO",
-            "artist": "SOURCES RADIO",
-            "time": 0,
-            "showInTracklist": false
-        },
-        {
-            "songName": "Meshuggah",
-            "artist": "Unknown Mortal Orchestra",
-            "time": 36,
-            "showInTracklist": true
-        },
-        {
-            "songName": "Mushroom Abolitionist",
-            "artist": "Vegyn",
-            "time": 248,
-            "showInTracklist": true
-        },
-        {
-            "songName": "intro",
-            "artist": "Orion Sun",
-            "time": 503,
-            "showInTracklist": true
-        },
-        {
-            "songName": "Kendrick Lamar/Marigold",
-            "artist": "Tori’s Ballad",
-            "time": 650,
-            "showInTracklist": true
-        },
-        {
-            "songName": "Between",
-            "artist": "Bay Ledges",
-            "time": 804,
-            "showInTracklist": true
-        },
-        {
-            "songName": "sangria",
-            "artist": "easy life, Arlo Parks",
-            "time": 874,
-            "showInTracklist": true
-        },
-        {
-            "songName": "My My",
-            "artist": "Chenayder",
-            "time": 1061,
-            "showInTracklist": true
-        }
-    ]
+  "title": "MIX_004",
+  "duration": 1164,
+  "songs": [
+    {
+      "songName": "INTRO",
+      "artist": "SOURCES RADIO",
+      "time": 0,
+      "showInTracklist": false
+    },
+    {
+      "songName": "Meshuggah",
+      "artist": "Unknown Mortal Orchestra",
+      "time": 36,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Mushroom Abolitionist",
+      "artist": "Vegyn",
+      "time": 248,
+      "showInTracklist": true
+    },
+    {
+      "songName": "intro",
+      "artist": "Orion Sun",
+      "time": 503,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Kendrick Lamar/Marigold",
+      "artist": "Tori’s Ballad",
+      "time": 650,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Between",
+      "artist": "Bay Ledges",
+      "time": 804,
+      "showInTracklist": true
+    },
+    {
+      "songName": "sangria",
+      "artist": "easy life, Arlo Parks",
+      "time": 874,
+      "showInTracklist": true
+    },
+    {
+      "songName": "My My",
+      "artist": "Chenayder",
+      "time": 1061,
+      "showInTracklist": true
+    }
+  ]
 }

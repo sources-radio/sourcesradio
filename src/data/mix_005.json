@@ -1,0 +1,60 @@
+{
+  "title": "MIX_005",
+  "duration": 1417,
+  "songs": [
+    {
+      "songName": "INTRO",
+      "artist": "SOURCES RADIO",
+      "time": 0,
+      "showInTracklist": false
+    },
+    {
+      "songName": "My luv",
+      "artist": "waterbaby",
+      "time": 30,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Found!",
+      "artist": "Portraits of Tracy",
+      "time": 71,
+      "showInTracklist": true
+    },
+    {
+      "songName": "GUNSHY",
+      "artist": "Allie Kelly",
+      "time": 365,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Bored Again!",
+      "artist": "Buddy Ross",
+      "time": 571,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Big Blues",
+      "artist": "Bickle",
+      "time": 806,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Gone",
+      "artist": "Chiiild",
+      "time": 928,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Shining",
+      "artist": "Noah Pope",
+      "time": 1089,
+      "showInTracklist": true
+    },
+    {
+      "songName": "Cinnamon Bread",
+      "artist": "Ryan Beatty",
+      "time": 1227,
+      "showInTracklist": true
+    }
+  ]
+}

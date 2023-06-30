@@ -11,6 +11,7 @@ const mix001 = require('../data/mix_001.json');
 const mix002 = require('../data/mix_002.json');
 const mix003 = require('../data/mix_003.json');
 const mix004 = require('../data/mix_004.json');
+const mix005 = require('../data/mix_005.json');
 
 const color = 
 {
@@ -24,8 +25,8 @@ export default function Main(){
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)'})
 
-    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix004);
-    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix004);
+    const [currentPlayingMix, setCurrentPlayingMix] = useState(mix005);
+    const [currentSelectedMix, setCurrentSelectedMix] = useState(mix005);
     const [playState, setPlayState] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [aboutOpen, setAboutOpen] = useState(false);
@@ -33,7 +34,7 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [isTracklistOpen, setIsTracklistOpen] = useState(false);
 
-    const mixArray = [mix004, mix003, mix002, mix001];
+    const mixArray = [mix005, mix004, mix003, mix002, mix001];
     const [allMixes, setAllMixes] = useState(mixArray);
     const [currentSong, setCurrentSong] = useState({artist: " ", song:" "})
     const [textColor, setTextColor] = useState(color.black);
